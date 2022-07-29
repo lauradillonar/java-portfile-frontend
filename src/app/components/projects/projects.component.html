@@ -1,0 +1,90 @@
+<section id="projects" class="services py-5 bg-light">
+  <div class="container py-5">
+    <h1 class="text-center py-5">{{ lang?.projects?.title }}</h1>
+    <div class="row pb-3">
+      <div class="col-lg-4 mb-3" *ngFor="let project of projects; index as i">
+        <div
+          class="card text-center py-3"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          *ngIf="i % 3 === 0"
+        >
+          <div class="card-body">
+            <div class="circle">
+              <span
+                ><i class="{{ project?.fontawasome }}"></i
+                ><span class="fw-bold">{{ project?.letter }}</span></span
+              >
+            </div>
+            <h4 class="fw-bold pb-2">{{ project?.title }}</h4>
+            <p class="pb-3">
+              {{ project?.text }}
+            </p>
+            <p class="viewmore text-center">
+              <a
+                href="{{ project?.viewmore }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><br />{{ project?.viewmoretext }}</a
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="card text-center py-3"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          *ngIf="i % 3 === 1"
+        >
+          <div class="card-body">
+            <div class="circle">
+              <span
+                ><i class="{{ project?.fontawasome }}"></i
+                ><span class="fw-bold">{{ project?.letter }}</span></span
+              >
+            </div>
+            <h4 class="fw-bold pb-2">{{ project?.title }}</h4>
+            <p class="pb-3">
+              {{ project?.text }}
+            </p>
+            <p class="viewmore text-center">
+              <a
+                href="{{ project?.viewmore }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><br />{{ project.viewmoretext }}</a
+              >
+            </p>
+          </div>
+        </div>
+        <div
+          class="card text-center py-3"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          *ngIf="i % 3 === 2"
+        >
+          <div class="card-body">
+            <div class="circle">
+              <span
+                ><i class="{{ project?.fontawasome }}"></i
+                ><span class="fw-bold">{{ project?.letter }}</span></span
+              >
+            </div>
+            <h4 class="fw-bold pb-2">{{ project?.title }}</h4>
+            <p class="pb-3">
+              {{ project?.text }}
+            </p>
+            <p class="viewmore text-center">
+              <a
+                href="{{ project?.viewmore }}"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><br />{{ project?.viewmoretext }}</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

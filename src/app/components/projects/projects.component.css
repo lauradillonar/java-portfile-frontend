@@ -1,0 +1,56 @@
+
+.card{
+    height: 100%;
+    border:none;
+    outline: none;
+    position: relative;
+
+    -webkit-box-shadow: -20px 24px 89px -46px rgba(0,0,0,0.59);
+    -moz-box-shadow: -20px 24px 89px -46px rgba(0,0,0,0.59);
+    box-shadow: -20px 24px 89px -46px rgba(0,0,0,0.59);
+}
+
+
+.card h4{
+    color: #616161;
+}
+.card p{
+    color: gray;
+}
+
+.circle{
+    height: 70px;
+    width: 70px;
+    background-color: #d4f2d5;
+    color: #616161;
+    padding-top: 20px;
+    font-size: 21px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.card:hover .circle{
+    background-color: grey;
+    color:white;
+    transition: 0.5s;
+}
+
+.card a{
+    color: #b89462
+}
+
+.card a:visited{
+    color: #b89462;
+}
+
+.card a:hover {
+    font-weight: 700;
+}
+
+.viewmore{
+    position: absolute;
+    bottom: 2rem;
+    left:50%;
+    margin: -30px 0 0 -30px;
+}

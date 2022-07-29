@@ -1,0 +1,103 @@
+<section id="contact" class="contact py-5">
+  <div class="container py-5">
+    <h1 class="text-center py-5">{{ lang?.contact?.title }}</h1>
+    <div class="row pb-3">
+      <div class="col-md-10 mx-auto">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="circle">
+              <span><i class="fas fa-location-arrow"></i></span>
+            </div>
+            <h5>{{ lang?.contact?.locationTitle }}</h5>
+            <p>{{ lang?.contact?.location }}</p>
+          </div>
+          <div class="col-md-4">
+            <div class="circle">
+              <span><i class="fas fa-envelope"></i></span>
+            </div>
+            <h5>{{ lang?.contact?.emailTitle }}</h5>
+            <p>{{ lang?.contact?.email }}</p>
+          </div>
+          <div class="col-md-4">
+            <div class="circle">
+              <span><i class="fas fa-phone"></i></span>
+            </div>
+            <h5>{{ lang?.contact?.phoneTitle }}</h5>
+            <p>{{ lang?.contact?.phone }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 mx-auto">
+        <form novalidate (ngSubmit)="onSave()" [formGroup]="contactForm">
+          <div class="row">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="form-control bg-light mb-3"
+                placeholder="{{ lang?.contact?.textName }}"
+                formControlName="name"
+                [class]="isValidField('name')"
+              />
+              <div class="invalid-feedback mb-3">
+                <span *ngIf="contactForm.get('name')?.errors?.['required']"
+                  >Please enter your name.</span
+                >
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <input
+                type="email"
+                class="form-control bg-light mb-3"
+                placeholder="{{ lang?.contact?.textEmail }}"
+                formControlName="email"
+                [class]="isValidField('email')"
+              />
+              <div class="invalid-feedback mb-3">
+                <span *ngIf="contactForm.get('email')?.errors?.['required']"
+                  >Please enter your email.</span
+                >
+                <span *ngIf="contactForm.get('email')?.errors?.['pattern']"
+                  >Please enter a valid email.</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <textarea
+                name=""
+                id=""
+                class="form-control bg-light"
+                placeholder="{{ lang?.contact?.textMessage }}"
+                formControlName="message"
+                [class]="isValidField('message')"
+                rows="10"
+              ></textarea>
+              <div class="invalid-feedback mb-3">
+                <span *ngIf="contactForm.get('message')?.errors?.['required']"
+                  >Please enter your message.</span
+                >
+                <span *ngIf="contactForm.get('message')?.errors?.['minlength']"
+                  >The message must be longer than to
+                  {{contactForm.get('message')?.errors?.['minlength']?.requiredLength}}
+                  characters.</span
+                >
+                <span *ngIf="contactForm.get('message')?.errors?.['maxlength']"
+                  >The message must be less than or equal to
+                  {{contactForm.get('message')?.errors?.['maxlength']?.requiredLength}}
+                  characters.</span
+                >
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn3 my-4">
+            {{ lang?.contact?.textSubmit }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

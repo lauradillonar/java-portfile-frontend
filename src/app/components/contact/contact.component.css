@@ -1,0 +1,45 @@
+
+.contact h5{
+    color: #616161;
+    font-weight: 700;
+}
+
+.contact p{
+    color: #616161;
+}
+
+.contact .circle{
+    height: 70px;
+    width: 70px;
+    background-color: #d4f2d5;
+    color: #616161;
+    padding-top: 20px;
+    font-size: 21px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.contact .circle:hover{
+    background-color: gray;
+    color: white;
+    transition: 0.5;
+}
+
+.contact .btn3{
+    background-color: #616161;
+    color: white;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 4px;
+}
+
+.btn3:hover{
+    background-color: transparent;
+    color: #616161;
+    border: 1px solid #616161;
+    transition: 0.5;
+}
+
+

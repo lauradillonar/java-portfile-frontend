@@ -1,0 +1,51 @@
+
+.navbar{
+    background-color: white;
+}
+
+.nav-link{
+    color: #b89462;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-link:visited{
+    color: #b89462;
+    background-color: white; 
+}
+
+.nav-link:hover {
+    color:white;
+    background-color: #b89462;
+}
+
+
+.navbar-brand{
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #b89462;
+    cursor: pointer;
+    text-decoration:none;
+    height: 94px;
+}
+
+.navbar-toggler-icon{
+    color:#b89462;
+    font-size: 1.5rem;
+    padding-top: .3rem;
+    padding-left: .2rem;
+    padding-right: .2rem;
+    border: none;
+
+}
+
+.navbar-toggler{
+    box-shadow: none;
+}
+.navbar-toggler:focus{
+    border:none;
+    box-shadow: none;
+}
+

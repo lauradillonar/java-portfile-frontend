@@ -1,0 +1,36 @@
+<section class="about py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 pt-3">
+        <img
+          src="{{ lang?.about?.image?.src }}"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          alt="{{ lang?.about?.image?.alt }}"
+          class="float-start mb-4 me-4"
+        />
+        <h1 class="fw-bold">{{ lang?.about?.title }}</h1>
+        <p>
+          <span class="fw-bold">{{ lang?.about?.subtitle }}</span>
+        </p>
+        <p [innerHTML]="lang?.about?.text"></p>
+
+        <div class="progress-block">
+          <div class="progress my-1" *ngFor="let skill of skills">
+            <div *ngFor="let value of values">
+              <div
+                *ngIf="skill?.progress === value + ''"
+                class="pro-value{{ value }} ps-2"
+              >
+                <p>
+                  {{ skill?.item }}
+                  <span text-white float-right> {{ skill?.progress }}%</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

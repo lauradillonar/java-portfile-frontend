@@ -1,0 +1,42 @@
+.education .card{
+    height: 100%;
+    border:none;
+    outline: none;
+
+    position: relative;
+
+    -webkit-box-shadow: -20px 24px 89px -46px rgba(0,0,0,0.59);
+    -moz-box-shadow: -20px 24px 89px -46px rgba(0,0,0,0.59);
+    box-shadow: -20px 24px 89px -46px rgba(0,0,0,0.59);
+}
+
+.education .card .title-ed{
+    color: #616161;
+    background-color: white;
+
+}
+
+.education .card a{
+    color: #b89462
+}
+
+.education .card a:visited{
+    color: #b89462;
+}
+
+.education .card a:hover {
+    font-weight: 700;
+
+}
+
+ul{
+    list-style-type: square;
+    color: gray;
+}
+
+
+.viewmore{
+    position: absolute;
+    bottom: 1rem;
+    right: 3rem;
+}

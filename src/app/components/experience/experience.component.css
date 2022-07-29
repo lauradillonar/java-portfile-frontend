@@ -1,0 +1,27 @@
+.experience .card{
+    border: none;
+    outline: none;
+
+    -webkit-box-shadow: -4px 8px 92px -20px rgba(0,0,0,0.3);
+    -moz-box-shadow: -4px 8px 92px -20px rgba(0,0,0,0.3);
+    box-shadow: -4px 8px 92px -20px rgba(0,0,0,0.3);
+}
+
+.experience .card a{
+    color: #b89462
+}
+
+.experience .card a:visited{
+    color: #b89462;
+}
+
+.experience .card a:hover {
+    font-weight: 700;
+
+}
+
+.experience .card .title{
+    color:#616161;
+    background-color: #d4f2d5;
+}
+
