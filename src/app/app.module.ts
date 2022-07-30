@@ -15,12 +15,16 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireModule} from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { ContactGuard } from './guards/contact.guard';
 import { BlogComponent } from './components/blog/blog.component';
+import { ListPersonComponent } from './person/list-person/list-person.component';
+import { CreatePersonComponent } from './person/create-person/create-person.component';
+import { EditPersonComponent } from './person/edit-person/edit-person.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,10 @@ import { BlogComponent } from './components/blog/blog.component';
     FooterComponent,
     HomeComponent,
     BlogComponent,
+    ListPersonComponent,
+    CreatePersonComponent,
+    EditPersonComponent,
+    SkillsComponent,
     
   ],
   imports: [
@@ -42,6 +50,7 @@ import { BlogComponent } from './components/blog/blog.component';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [AngularFirestore, ContactGuard],

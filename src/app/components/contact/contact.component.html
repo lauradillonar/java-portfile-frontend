@@ -1,4 +1,4 @@
-<section id="contact" class="contact py-5">
+<section id="contact" class="contact py-5 bg-light">
   <div class="container py-5">
     <h1 class="text-center py-5">{{ lang?.contact?.title }}</h1>
     <div class="row pb-3">
@@ -42,7 +42,7 @@
               />
               <div class="invalid-feedback mb-3">
                 <span *ngIf="contactForm.get('name')?.errors?.['required']"
-                  >Please enter your name.</span
+                  >Por favor, ingrese su nombre.</span
                 >
               </div>
             </div>
@@ -57,10 +57,10 @@
               />
               <div class="invalid-feedback mb-3">
                 <span *ngIf="contactForm.get('email')?.errors?.['required']"
-                  >Please enter your email.</span
+                  >Por favor, ingrese su email.</span
                 >
                 <span *ngIf="contactForm.get('email')?.errors?.['pattern']"
-                  >Please enter a valid email.</span
+                  >Por favor, ingrese un email válido.</span
                 >
               </div>
             </div>
@@ -78,17 +78,17 @@
               ></textarea>
               <div class="invalid-feedback mb-3">
                 <span *ngIf="contactForm.get('message')?.errors?.['required']"
-                  >Please enter your message.</span
+                  >Por favor, ingrese su mensaje.</span
                 >
                 <span *ngIf="contactForm.get('message')?.errors?.['minlength']"
-                  >The message must be longer than to
+                  >El mensaje debe tener más de
                   {{contactForm.get('message')?.errors?.['minlength']?.requiredLength}}
-                  characters.</span
+                  caracteres.</span
                 >
                 <span *ngIf="contactForm.get('message')?.errors?.['maxlength']"
-                  >The message must be less than or equal to
+                  >El mensaje puede contener menos de
                   {{contactForm.get('message')?.errors?.['maxlength']?.requiredLength}}
-                  characters.</span
+                  caracteres.</span
                 >
               </div>
             </div>
@@ -97,6 +97,23 @@
             {{ lang?.contact?.textSubmit }}
           </button>
         </form>
+      </div>
+    </div>
+    <div class="row py-3">
+      <div class="col-md-10 mx-auto">
+        <div class="row text-center">
+          <div class="col-md">
+            <div class="circle mx-1" style="cursor: pointer">
+              <span><i class="fab fa-facebook fa-lg fa-fw"></i></span>
+            </div>
+            <div class="circle mx-1" style="cursor: pointer">
+              <span><i class="fab fa-instagram fa-lg fa-fw"></i></span>
+            </div>
+            <div class="circle mx-1" style="cursor: pointer">
+              <span><i class="fab fa-twitter fa-lg fa-fw"></i></span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

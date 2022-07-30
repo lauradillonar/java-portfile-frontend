@@ -17,7 +17,7 @@ export class EducationComponent implements OnInit {
   ngOnInit(): void {
     this.data.getData().subscribe(data =>{
       this.myPortfile=data;
-      this.lang=this.myPortfile.en;
+      this.lang=this.myPortfile.es;
       this.items= this.lang.education.cards;
     });
   }

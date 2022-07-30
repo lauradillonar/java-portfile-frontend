@@ -4,44 +4,38 @@
                 "src":"./assets/img/cfc94.png",
                 "alt":"ConFluencia Creativa",
                 "url":"",
-                "fragment": "main"
+                "fragment": ""
             },
             "navbar":{
                     "home":{
                                 "id": 1,
                                 "link": "HOME",
-                                "url": "",
+                                "url": "home",
                                 "fragment": "main"
                     }, 
                     "cards": [
                         {
                             "id": 2,
                             "link": "PROJECTS",
-                            "url":"",
+                            "url":"home",
                             "fragment":"projects"
                         },
                         {
                             "id": 3,
                             "link": "EXPERIENCE",
-                            "url":"",
+                            "url":"home",
                             "fragment":"experience"
                         },
                         {
                             "id": 4,
                             "link": "EDUCATION",
-                            "url": "",
+                            "url": "home",
                             "fragment":"education"
                         },
                         {
                             "id": 5,
-                            "link": "BLOG",
-                            "url": "blog",
-                            "fragment":"" 
-                        },
-                        {
-                            "id": 6,
                             "link": "CONTACT",
-                            "url": "",
+                            "url": "home",
                             "fragment":"contact"
                         }
                     ]
@@ -49,7 +43,7 @@
             "hello": {
                             "helloim": "Hello, I'm ",
                             "name": "Laura Dillon",
-                            "job": "WEB PROGRAMMER JR"
+                            "job": "FULLSTACK PROGRAMMER JR"
             },
             "about":{
                             "title":"About me.",
@@ -311,44 +305,317 @@
 ,
 
     "es": {
-        "navbar":[
-                    {
-                        "id": 1,
-                        "link": "INICIO",
-                        "url": "#"
-                    },
+        "logo": {
+            "src":"./assets/img/cfc94.png",
+            "alt":"ConFluencia Creativa",
+            "url":"",
+            "fragment": ""
+        },
+        "navbar":{
+                "home":{
+                            "id": 1,
+                            "link": "INICIO",
+                            "url": "home",
+                            "fragment": "main"
+                }, 
+                "cards": [
                     {
                         "id": 2,
-                        "link": "PROYECTOS",
-                        "url":"#"
+                        "link": "EXPERIENCIA",
+                        "url":"home",
+                        "fragment":"experience"
                     },
                     {
                         "id": 3,
-                        "link": "EXPERIENCIA",
-                        "url":"#"
+                        "link": "EDUCACIÓN",
+                        "url": "home",
+                        "fragment":"education"
                     },
                     {
                         "id": 4,
-                        "link": "EDUCACIÓN",
-                        "url": "#"
+                        "link": "TECNOLOGÍAS",
+                        "url":"home",
+                        "fragment":"skills"
                     },
                     {
                         "id": 5,
-                        "link": "BLOG",
-                        "url": "https://confluenciacreativa.com"
+                        "link": "PROYECTOS",
+                        "url":"home",
+                        "fragment":"projects"
                     },
                     {
                         "id": 6,
                         "link": "CONTACTO",
-                        "url": "#"
+                        "url": "home",
+                        "fragment":"contact"
                     }
-                ],
-                "hello": {
-                            "helloim": "¡Hola! Soy ",
-                            "name": "Laura Dillon",
-                            "job": "PROGRAMADORA WEB JR"
-                }              
-            }
+                ]
+        },
+        "hello": {
+                        "helloim": "Hola, Soy ",
+                        "name": "Laura Dillon",
+                        "job": "PROGRAMADORA FULLSTACK JR"
+        },
+        "about":{
+                        "title":"Acerca de mí.",
+                        "subtitle": "En constante búsqueda de herramientas tecnológicas que permitan aumentar la calidad de vida.",
+                        "text":"Desde que tenía siete años, me ha sorprendido lo que se puede lograr al escribir código en una computadora. Sigo aprendiendo sobre las nuevas tecnologías de la información que, sumadas a la creatividad, se convierten en herramientas para resolver problemas cotidianos.<br /><br />Si necesita un sitio web simple, comercial o una aplicación móvil, no hay problema, mi trabajo es hacer que su marca se destaque, escuchando con atención para entender sus necesidades.<br /><br />Por favor, no dude en contactarme.",
+                        "image":{
+                            "src":"./assets/img/laura.jpg",
+                            "alt": "Laura Dillon"
+                        }
+                    },
+        "skills":{
+                        "title":"Tecnologías.",
+                        "bars":[
+                            {
+                                "id": 1,
+                                "item": "HTML/CSS",
+                                "progress": "90"
+                            },
+                            {
+                                "id": 2,
+                                "item": "JAVASCRIPT",
+                                "progress": "80"
+                            },
+                            {
+                                "id": 3,
+                                "item": "BOOTSTRAP",
+                                "progress": "90"
+                            },
+                            {
+                                "id": 4,
+                                "item": "ANGULAR",
+                                "progress": "70"
+                            },
+                            {
+                                "id": 5,
+                                "item": "PHP/MySQL",
+                                "progress": "80"
+                            },
+                            {
+                                "id": 6,
+                                "item": "WORDPRESS",
+                                "progress": "90"
+                            }
+                        ]
+            },
+        "projects": { 
+                    "title": "Proyectos.",
+                    "cards":[
+                        {
+                            "id": 1,
+                            "fontawasome": "fab fa-js fa-lg fa-fw",
+                            "letter": "",
+                            "title": "JavaScript",
+                            "text": "Actividades de manejo de datos en tablas y listas. Responsive design.",
+                            "viewmore": "",
+                            "viewmoretext": "Ver más",
+                            "text-description": "Esta es una descripción de la tarjeta 1."
+                        },
+                        {
+                            "id": 2,
+                            "fontawasome": "fab fa-php fa-lg fa-fw",
+                            "letter": "",
+                            "title": "PHP / MySQL",
+                            "text": "Esta app sirve para tomar notas y estudiar de modo colaborativo con otros estudiantes.",
+                            "viewmore": "",
+                            "viewmoretext": "Ver más"
+                        },
+                        {
+                            "id": 3,
+                            "fontawasome": "fab fa-wordpress-simple fa-lg fa-fw",
+                            "letter": "",
+                            "title": "WordPress",
+                            "text": "En este espacio, comparto material y actividades para trabajar el entendimiento y la expresión, tales como productos de apoyo que incrementan y compensan las dificultades de comunicación de muchas personas.",
+                            "viewmore": "https://confluenciacreativa.com",
+                            "viewmoretext": "Ver más"
+                        },
+                        {
+                            "id": 4,
+                            "fontawasome": "fab fa-angular fa-lg fa-fw",
+                            "letter": "",
+                            "title": "Angular",
+                            "text": "Frontend de aplicación para crear una web personal.",
+                            "viewmore": "",
+                            "viewmoretext": "Ver más"
+                        },
+                        {
+                            "id": 5,
+                            "fontawasome": "",
+                            "letter": "M",
+                            "title": "Super Mario",
+                            "text": "Animación usando Spreadsheets donde Mario salta la tortuga al hacer clic con el mouse.",
+                            "viewmore": "",
+                            "viewmoretext": "Ver más"
+                        },
+                        {
+                            "id": 6,
+                            "fontawasome": "fab fa-github fa-lg fa-fw",
+                            "letter": "",
+                            "title": "GitHub",
+                            "text": "@lauradillonar",
+                            "viewmore": "https://github.com/lauradillonar",
+                            "viewmoretext": "Ver más"
+                        }
+                    ]
+                },
+        "experience": {
+                        "title": "Experiencia.",
+                        "cards":[
+                                    {
+                                    "title":"ConFluencia Creativa",
+                                    "subtitle": "Desarrollos FullStack",
+                                    "when":"Marzo 2020 - Actualidad",
+                                    "where": "Palermo Buenos Aires, Salta, Argentina.",
+                                    "text": "Mis últimos desarrollos en HTML, CSS, Bootstrap, Javascript, Angular, Spring Boot, Firebase Firestore y Python Flask:",
+                                    "link1": "github.com/lauradillonar",
+                                    "url1": "https://github.com/lauradillonar",
+                                    "link2": "",
+                                    "url2": "",
+                                    "link3": "",
+                                    "url3": ""
+                                    },
+                                    {
+                                        "title": "Difusión, análisis de estadísticas<br /> y SEO",
+                                        "subtitle": "Frecuencia Azul Radio",
+                                        "when": "Julio 2017 - Abril 2020",
+                                        "where": "Palermo Buenos Aires, Salta, Argentina.",
+                                        "text": "#Autismo #Asperger #SAAC #ComunicaciónVisual #Pictogramas",
+                                        "link1": "twitter.com/lauradillonar",
+                                        "url1":"https://twitter.com/lauradillonar",
+                                        "link2": "facebook.com/fazulradio",
+                                        "url2": "https://facebook.com/fazulradio",
+                                        "link3": "bit.ly/grupoPictos",
+                                        "url3": "https://bit.ly/grupoPictos"
+                                    },
+                                    {
+                                        "title": "Tutora de matemáticas",
+                                        "subtitle": "para niños y adolescentes",
+                                        "when": "Enero 1998 - Septiembre 2012.",
+                                        "where": "Salta, Córdoba, Mendoza, Palermo Buenos Aires, City Bell La Plata",
+                                        "text": "Estudiamos en casa",
+                                        "link1": "",
+                                        "url1": "",
+                                        "link2": "",
+                                        "url2": "",
+                                        "link3": "",
+                                        "url3": ""
+                                    },
+                                    {
+                                        "title":"Secretaría de Evaluación Intitucional",
+                                        "subtitle": "Escuela Superior Nacional Nautica",
+                                        "when": "Marzo 2005 - Marzo 2006",
+                                        "where": "Buenos Aires, Argentina",
+                                        "text": "Obtuvimos las certificación CONEAU para la ESNN integrando el Equipo de Autoevaluación Institucional juanto a MNS Guillermo Nassello, Ph.D. Psychology Paladino, Lic. Horacio Cappiello from UBA y miembros de la ESNN.",
+                                        "link1":"",
+                                        "url1": "",
+                                        "link2": "",
+                                        "url2": "",
+                                        "link3": "",
+                                        "url3": ""
+                                    },
+                                    {
+                                        "title":"Migración a Linux <br />de la Fac.Cs.Naturales",
+                                        "subtitle": "Universidad Nacional de Salta<br />Secretaria Técnica",
+                                        "when": "Enero - Abril 2002",
+                                        "where": "Salta, Argentina.",
+                                        "text": "Coordinadora de capacitación en Linux en las oficinas del Rectorado y Facultades.<br />Instalación de Linux.",
+                                        "link1":"",
+                                        "url1": "",
+                                        "link2": "",
+                                        "url2": "",
+                                        "link3": "",
+                                        "url3": ""
+                                    }
+                        ]
+                },
+        "education": {
+                        "title": "Educación.",
+                        "cards": [
+                                    {
+                                        "title": "Inglés para el desarrollo de software",
+                                        "when": "Marzo - Abril 2022",
+                                        "subtitle": "Ministerio de Desarrollo Productivo, Argentina.",
+                                        "text1": "<ul><li>Specific Vocabulary: IT</li><li>Present Simple. Adverbs of Frequency.</li><li>Programming. Languages. Terms used in programming.</li><li>Present Continuous. Spelling rules. Business English. Structural organization of a company.</li><li>Simple past. Preparation of professional profile.</li></ul>",
+                                        "link": "",
+                                        "url":"",
+                                        "text2":"",
+                                        "viewmore": "https://www.argentina.gob.ar/ingles-para-desarrollo-de-software",
+                                        "viewmoretext": "Ver más"
+                                    },
+                                    {
+                                        "title": "Argentina Programa<br />#YoProgramo",
+                                        "when": "Segunda etapa<br />Noviembre 2021 - Mayo 2022",
+                                        "subtitle": "Ministerio de Desarrollo Productivo, Argentina.",
+                                        "text1": "<ul><li>Introducción al desarrollo web y aplicaciones</li><li>Desarrollo Frontend estático</li><li>Desarrollo Frontend dinámico</li><li>Bases de datos</li><li>Programación Orientada a Objetos POO</li><li>Programación Java web</li><li>Backend con Spring Boot</li><li>DevOps</li></ul>",
+                                        "link": "",
+                                        "url":"",
+                                        "text2":"",
+                                        "viewmore": "https://www.argentina.gob.ar/produccion/argentina-programa/segunda-etapa",
+                                        "viewmoretext": "Ver más"
+                                    },
+                                    {
+                                        "title": "Argentina Programa<br />#SeProgramar",
+                                        "when": "Primer Etapa<br />Agosto - Octubre 2021",
+                                        "subtitle": "Ministerio de Desarrollo Productivo, Argentina.",
+                                        "text1": "Credential ID: RWGNivzgYUiwmBCT",
+                                        "link": "Ver credencial",
+                                        "url":"https://mumuki.io/argentina-programa/certificates/verify/RWGNivzgYUiwmBCT",
+                                        "text2":"<ul><li>Programación básica</li><li>Programación imperativa con JavaScript</li><li>Programación Orientada a Objetos con Ruby</li></ul>",
+                                        "viewmore": "https://www.argentina.gob.ar/produccion/argentina-programa/primera-etapa",
+                                        "viewmoretext": "Ver más"
+                                    },
+                                    {
+                                        "title": "Introducción a la programación con Python",
+                                        "when": "2021",
+                                        "subtitle": "Curso organizado por ITgrarte para Endava",
+                                        "text1": "",
+                                        "link": "",
+                                        "url":"",
+                                        "text2":"",
+                                        "viewmore": "https://www.itgrarte.org/capacitacion/introduccion-a-la-programacion-en-python/",
+                                        "viewmoretext": "Ver más"
+                                    },
+                                    {
+                                        "title": "Profesorado de Matemáticas y Licenciatura en Sistemas",
+                                        "when": "Marzo 1998 - Julio 2002",
+                                        "subtitle": "Universidad Nacional de Salta<br />Salta, Argentina.",
+                                        "text1": "",
+                                        "link": "",
+                                        "url":"",
+                                        "text2":"",
+                                        "viewmore": "",
+                                        "viewmoretext": "Ver más"
+                                    },
+                                    {
+                                        "title": "Bachiller con orientación pedagógica",
+                                        "when": "Marzo 1991 - Diciembre 1995",
+                                        "subtitle": "Instituto Privado Santa María<br />Posadas, Misiones, Argentina.",
+                                        "text1": "",
+                                        "link": "",
+                                        "url":"",
+                                        "text2":"",
+                                        "viewmore": "",
+                                        "viewmoretext": "Ver más"
+                                    }
+                        ]
+                },
+        "contact": {
+                        "title": "Contacto.",
+                        "locationTitle": "Lugar",
+                        "location": "Salta, Argentina",
+                        "emailTitle": "Email",
+                        "email": "laura.dillon.ar @gmail.com",
+                        "phoneTitle": "Teléfono",
+                        "phone": "+54 11 30033412",
+                        "textName": "Nombre",
+                        "textEmail": "Email",
+                        "textMessage": "Mensaje",
+                        "textSubmit": "Enviar"
+            },
+        "footer": {"text": "Copyright 2022 By ConFluenciaCreativa"}
+        }
 }
 
 

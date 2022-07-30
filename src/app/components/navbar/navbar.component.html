@@ -20,14 +20,14 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
         <a
-          class="nav-link px-lg-4 rounded"
+          class="nav-link px-lg-2 rounded"
           routerLink="{{ lang?.navbar?.home?.url }}"
           fragment="{{ lang?.navbar?.home?.fragment }}"
           >{{ lang?.navbar?.home?.link }}</a
         >
         <div *ngFor="let item of items">
           <a
-            class="nav-link px-lg-4 rounded"
+            class="nav-link px-lg-2 rounded"
             routerLink="{{ item?.url }}"
             fragment="{{ item?.fragment }}"
             >{{ item?.link }}</a

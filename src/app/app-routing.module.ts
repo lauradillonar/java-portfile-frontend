@@ -1,22 +1,37 @@
-import { BlogComponent } from './components/blog/blog.component';
+import { EditPersonComponent } from './person/edit-person/edit-person.component';
+import { CreatePersonComponent } from './person/create-person/create-person.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactGuard } from './guards/contact.guard';
+import { ListPersonComponent } from './person/list-person/list-person.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path:'', 
+    component: ListPersonComponent
+  },
+  {
+    path:'create', 
+    component: CreatePersonComponent
+  },
+  {
+    path:'edit/:idPerson',
+    component: EditPersonComponent
+  },
+  {
+    path: 'home', 
     component: HomeComponent
   },
   {
-    path: "#contact", 
+    path: "home#contact", 
     component: HomeComponent,
     canDeactivate: [ContactGuard]
   },
   {
-    path: "blog",
-    component: BlogComponent
+    path: '**',
+    redirectTo: '',
+    pathMatch: 'full'
   }
 ];
 

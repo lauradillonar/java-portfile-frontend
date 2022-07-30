@@ -14,22 +14,6 @@
           <span class="fw-bold">{{ lang?.about?.subtitle }}</span>
         </p>
         <p [innerHTML]="lang?.about?.text"></p>
-
-        <div class="progress-block">
-          <div class="progress my-1" *ngFor="let skill of skills">
-            <div *ngFor="let value of values">
-              <div
-                *ngIf="skill?.progress === value + ''"
-                class="pro-value{{ value }} ps-2"
-              >
-                <p>
-                  {{ skill?.item }}
-                  <span text-white float-right> {{ skill?.progress }}%</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>

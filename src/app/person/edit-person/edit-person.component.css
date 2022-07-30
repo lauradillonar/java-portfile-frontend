@@ -1,0 +1,26 @@
+.initial{
+    padding-top: 110px;
+}
+
+.editbutton{
+    background-color: #616161;
+    color: white;
+    outline: none;
+    border: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.editbutton:hover {
+    background-color: transparent;
+    color: #616161;
+    border: 1px solid #616161;
+    transition: 0.5;
+}
+
+input{
+    margin-bottom: 1rem;
+}

@@ -6,6 +6,7 @@
 
 export const environment = {
   production: false,
+  personURL: 'http://localhost:8088/portfile/api/persons/',
   firebaseConfig : {
     apiKey: "AIzaSyChMYnOt8YA_Q9AzK_JjzqCwSHb89KcMRk",
     authDomain: "lvd-portfile.firebaseapp.com",

@@ -1,0 +1,49 @@
+.initial{
+    padding-top: 110px;
+}
+
+.card{
+    border: none;
+    outline: none;
+
+    -webkit-box-shadow: -4px 8px 92px -20px rgba(0,0,0,0.3);
+    -moz-box-shadow: -4px 8px 92px -20px rgba(0,0,0,0.3);
+    box-shadow: -4px 8px 92px -20px rgba(0,0,0,0.3);
+}
+
+a{
+    color: #b89462;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #b89462;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+.homebutton{
+    position: absolute;
+    bottom: 1rem;
+    right: 11rem;
+    cursor: pointer;
+    margin: -10px 0 0 -10px;
+}
+
+.editbutton{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    margin: -10px 0 0 -10px;
+}
+
+.deletebutton{
+    position: absolute;
+    bottom: 1rem;
+    right: 6rem;
+    cursor:pointer;
+    margin: -10px 0 0 -10px;
+}
