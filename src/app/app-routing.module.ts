@@ -20,7 +20,7 @@ const routes: Routes = [
     component: EditPersonComponent
   },
   {
-    path: 'home', 
+    path: 'home/:idPerson', 
     component: HomeComponent
   },
   {

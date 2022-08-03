@@ -18,7 +18,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <a class="homebutton" routerLink="/home/">
+          <a class="homebutton" routerLink="/home/{{ person.idPerson }}">
             <i class="far fa-eye"></i> Ver
           </a>
           <a class="editbutton" routerLink="/edit/{{ person.idPerson }}">
@@ -44,7 +44,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <a class="homebutton" routerLink="/home" fragment="main">
+          <a class="homebutton" routerLink="/home/{{ person.idPerson }}">
             <i class="far fa-eye"></i> Ver
           </a>
           <a class="editbutton" routerLink="/edit/{{ person.idPerson }}">

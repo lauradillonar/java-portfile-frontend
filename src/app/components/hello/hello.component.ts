@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Person } from 'src/app/models/person';
 import { PortfileService } from 'src/app/services/portfile.service';
 
 @Component({
@@ -12,6 +13,7 @@ export class HelloComponent implements OnInit {
 
   myPortfile:any;
   lang: any;
+  @Input() person!: Person;
 
   ngOnInit(): void {
     this.data.getData().subscribe(data =>{
