@@ -3,17 +3,18 @@
     <div class="row">
       <div class="col-12 pt-3">
         <img
-          src="{{ lang?.about?.image?.src }}"
+          *ngIf="person.image"
+          src="{{ person.image }}"
           data-aos="fade-right"
           data-aos-duration="2000"
-          alt="{{ lang?.about?.image?.alt }}"
+          alt="{{ person.name }} {{ person.lastname }}"
           class="float-start mb-4 me-4"
         />
         <h1 class="fw-bold">{{ lang?.about?.title }}</h1>
         <p>
-          <span class="fw-bold">{{ lang?.about?.subtitle }}</span>
+          <span class="fw-bold">{{ person.aboutMeSub }}</span>
         </p>
-        <p [innerHTML]="lang?.about?.text"></p>
+        <p [innerHTML]="person.aboutMe"></p>
       </div>
     </div>
   </div>

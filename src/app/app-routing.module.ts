@@ -20,13 +20,8 @@ const routes: Routes = [
     component: EditPersonComponent
   },
   {
-    path: 'home/:idPerson', 
+    path: ':idPerson/home', 
     component: HomeComponent
-  },
-  {
-    path: "home#contact", 
-    component: HomeComponent,
-    canDeactivate: [ContactGuard]
   },
   {
     path: '**',
