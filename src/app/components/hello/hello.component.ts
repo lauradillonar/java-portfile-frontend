@@ -1,3 +1,4 @@
+import { isNull } from '@angular/compiler/src/output/output_ast';
 import { Component, Input, OnInit } from '@angular/core';
 import { Person } from 'src/app/models/person';
 import { PortfileService } from 'src/app/services/portfile.service';
@@ -14,6 +15,7 @@ export class HelloComponent implements OnInit {
   myPortfile:any;
   lang: any;
   @Input() person!: Person;
+  @Input() isPerson?: boolean;
 
   ngOnInit(): void {
     this.data.getData().subscribe(data =>{

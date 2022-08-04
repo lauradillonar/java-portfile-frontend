@@ -2,13 +2,15 @@
   <div class="container pt-5">
     <div class="row pt-3">
       <div class="col-lg-6 py-2 me-auto">
-        <h3 data-aos="fade-left" data-aos-duration="2000">
-          <span class="fw-light">{{ lang?.hello?.helloim }}</span>
-          {{ person.name }} {{ person.lastname }}
-        </h3>
-        <h6 data-aos="fade-right" data-aos-duration="2000">
-          {{ person.job }}
-        </h6>
+        <div *ngIf="isPerson">
+          <h3 data-aos="fade-left" data-aos-duration="2000">
+            <span class="fw-light">{{ lang?.hello?.helloim }}</span>
+            {{ person.name }} {{ person.lastname }}
+          </h3>
+          <h6 data-aos="fade-right" data-aos-duration="2000">
+            {{ person.job }}
+          </h6>
+        </div>
       </div>
     </div>
   </div>

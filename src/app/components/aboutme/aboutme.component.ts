@@ -14,6 +14,7 @@ export class AboutmeComponent implements OnInit {
   myPortfile:any;
   lang: any;
   @Input() person!: Person;
+  @Input() isPerson?: boolean;
 
   ngOnInit(): void {
     this.data.getData().subscribe(data =>{

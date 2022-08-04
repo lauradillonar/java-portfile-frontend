@@ -1,7 +1,11 @@
-<app-navbar [person]="person"></app-navbar>
-<app-hello [person]="person"></app-hello>
-<app-aboutme [person]="person"></app-aboutme>
-<app-experience></app-experience>
+<app-navbar
+  [idPerson]="idPerson"
+  [isPerson]="isPerson"
+  [person]="person"
+></app-navbar>
+<app-hello [isPerson]="isPerson" [person]="person"></app-hello>
+<app-aboutme [isPerson]="isPerson" [person]="person"></app-aboutme>
+<app-experience [idPerson]="idPerson"></app-experience>
 <app-education></app-education>
 <app-skills></app-skills>
 <app-projects></app-projects>

@@ -25,6 +25,9 @@ import { ListPersonComponent } from './person/list-person/list-person.component'
 import { CreatePersonComponent } from './person/create-person/create-person.component';
 import { EditPersonComponent } from './person/edit-person/edit-person.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { CreateExperienceComponent } from './cruds/experience/create-experience/create-experience.component';
+import { EditExperienceComponent } from './cruds/experience/edit-experience/edit-experience.component';
+import { ListExperienceComponent } from './cruds/experience/list-experience/list-experience.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { SkillsComponent } from './components/skills/skills.component';
     CreatePersonComponent,
     EditPersonComponent,
     SkillsComponent,
+    CreateExperienceComponent,
+    EditExperienceComponent,
+    ListExperienceComponent,
     
   ],
   imports: [

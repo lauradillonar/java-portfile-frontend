@@ -2,19 +2,21 @@
   <div class="container">
     <div class="row">
       <div class="col-12 pt-3">
-        <img
-          *ngIf="person.image"
-          src="{{ person.image }}"
-          data-aos="fade-right"
-          data-aos-duration="2000"
-          alt="{{ person.name }} {{ person.lastname }}"
-          class="float-start mb-4 me-4"
-        />
-        <h1 class="fw-bold">{{ lang?.about?.title }}</h1>
-        <p>
-          <span class="fw-bold">{{ person.aboutMeSub }}</span>
-        </p>
-        <p [innerHTML]="person.aboutMe"></p>
+        <div *ngIf="isPerson">
+          <img
+            *ngIf="person.image"
+            src="{{ person.image }}"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            alt="{{ person.name }} {{ person.lastname }}"
+            class="float-start mb-4 me-4"
+          />
+          <h1 class="fw-bold">{{ lang?.about?.title }}</h1>
+          <p>
+            <span class="fw-bold">{{ person.aboutMeSub }}</span>
+          </p>
+          <p [innerHTML]="person.aboutMe"></p>
+        </div>
       </div>
     </div>
   </div>

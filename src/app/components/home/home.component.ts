@@ -12,33 +12,32 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   fragm: any;
-  _person!: Person;
+  person!: Person;
+  idPerson?: number;
+  isPerson: boolean = false;
 
   constructor(
     private router: Router,
     private readonly activateRouter: ActivatedRoute,
     private personService: PersonService) { }
 
-  get person():Person {
-    return this._person;
-  }
-
-  set person(value: Person) {
-    this._person = value;
-  }
-
   ngOnInit(): void {
-    const idPerson = this.activateRouter.snapshot.params['idPerson'];
-
-    this.personService.home(idPerson).subscribe(
-      data => {
-        this.person = data;
-      },
-      err => {
-        Swal.fire("Ops...",err.error.message, "error");
-        this.router.navigate(['/']);
-      }
-    );
+    console.log("home.component.ts init");
+    this.idPerson = this.activateRouter.snapshot.params['idPerson'];
+    
+    if(this.idPerson){
+      this.personService.home(this.idPerson).subscribe(
+        data => {
+          this.person = data;
+          console.log(this.person);
+          this.isPerson = true;
+        },
+        err => {
+          Swal.fire("Ops...",err.error.message, "error");
+          this.router.navigate(['/']);
+        }
+      );
+    }
 
     this.activateRouter.fragment.subscribe((param)=>{
       this.fragm = param;

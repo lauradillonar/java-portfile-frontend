@@ -1,12 +1,13 @@
 <nav class="navbar navbar-expand-lg fixed-top text-uppercase">
   <div class="container">
-    <a
-      *ngIf="person.logoSrc"
-      class="navbar-brand"
-      routerLink="{{ person.logoUrl }}"
-      fragment="{{ lang?.logo?.fragment }}"
-      ><img src="{{ person.logoSrc }}" alt="{{ person.logoAlt }}"
-    /></a>
+    <div *ngIf="isPerson">
+      <a
+        class="navbar-brand"
+        routerLink="{{ person.logoUrl }}"
+        fragment="{{ lang?.logo?.fragment }}"
+        ><img src="{{ person.logoSrc }}" alt="{{ person.logoAlt }}"
+      /></a>
+    </div>
     <button
       class="navbar-toggler"
       type="button"
@@ -22,14 +23,14 @@
       <div class="navbar-nav ms-auto">
         <a
           class="nav-link px-lg-2 rounded"
-          routerLink="/{{ person.idPerson }}/{{ lang?.navbar?.home?.url }}"
+          routerLink="/{{ idPerson }}/{{ lang?.navbar?.home?.url }}"
           fragment="{{ lang?.navbar?.home?.fragment }}"
           >{{ lang?.navbar?.home?.link }}</a
         >
         <div *ngFor="let item of items">
           <a
             class="nav-link px-lg-2 rounded"
-            routerLink="/{{ person.idPerson }}/{{ item?.url }}"
+            routerLink="/{{ idPerson }}/{{ item?.url }}"
             fragment="{{ item?.fragment }}"
             >{{ item?.link }}</a
           >
