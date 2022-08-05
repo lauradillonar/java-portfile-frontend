@@ -22,14 +22,12 @@ export class HomeComponent implements OnInit {
     private personService: PersonService) { }
 
   ngOnInit(): void {
-    console.log("home.component.ts init");
     this.idPerson = this.activateRouter.snapshot.params['idPerson'];
     
     if(this.idPerson){
       this.personService.home(this.idPerson).subscribe(
         data => {
           this.person = data;
-          console.log(this.person);
           this.isPerson = true;
         },
         err => {
@@ -41,7 +39,6 @@ export class HomeComponent implements OnInit {
 
     this.activateRouter.fragment.subscribe((param)=>{
       this.fragm = param;
-      console.log(this.fragm);
     });
   }
 

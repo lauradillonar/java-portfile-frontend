@@ -1,73 +1,122 @@
 <section id="experience" class="experience py-5 bg-light">
   <div class="container py-5">
     <h1 class="text-center py-5">{{ lang?.experience?.title }}</h1>
-    <div class="row mb-3" *ngFor="let item of experiences; index as i">
-      <div
-        class="card my-3"
-        data-aos="fade-left"
-        data-aos-duration="2000"
-        *ngIf="i % 2 === 0"
-      >
-        <div class="row">
-          <div class="col-lg-4 title">
-            <div class="py-5 px-5">
-              <h4 class="fw-bold pb-2" [innerHTML]="item.title"></h4>
-              <h6 [innerHTML]="item.subtitle"></h6>
+    <div *ngIf="hasExperience">
+      <div class="row mb-3" *ngFor="let item of experiences; index as i">
+        <div
+          class="card my-3"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+          *ngIf="i % 2 === 0"
+        >
+          <div class="row">
+            <div class="col-lg-4 title">
+              <div class="py-5 px-5">
+                <h4 class="fw-bold pb-2" [innerHTML]="item.title"></h4>
+                <h6 [innerHTML]="item.subtitle"></h6>
+              </div>
+            </div>
+            <div class="col-lg-8 py-5 px-5">
+              <p>{{ item.when }}<br />{{ item.where }}</p>
+              <p>
+                <span [innerHTML]="item.text"></span>
+                <a
+                  *ngIf="item.link1 != ''"
+                  href="{{ item.url1 }}"
+                  target="blank"
+                  ><br />{{ item.link1 }}<br
+                /></a>
+                <a
+                  *ngIf="item.link2 != ''"
+                  href="{{ item.url2 }}"
+                  target="blank"
+                  >{{ item.link2 }}<br
+                /></a>
+                <a
+                  *ngIf="item.link3 != ''"
+                  href="{{ item.url3 }}"
+                  target="blank"
+                  >{{ item.link3 }}</a
+                >
+              </p>
             </div>
           </div>
-          <div class="col-lg-8 py-5 px-5">
-            <p>{{ item.when }}<br />{{ item.where }}</p>
-            <p>
-              <span [innerHTML]="item.text"></span>
-              <a *ngIf="item.link1 != ''" href="{{ item.url1 }}" target="blank"
-                ><br />{{ item.link1 }}<br
-              /></a>
-              <a *ngIf="item.link2 != ''" href="{{ item.url2 }}" target="blank"
-                >{{ item.link2 }}<br
-              /></a>
+          <div class="row">
+            <div class="col">
               <a
-                *ngIf="item.link3 != ''"
-                href="{{ item.url3 }}"
-                target="blank"
-                >{{ item.link3 }}</a
+                class="editbutton"
+                routerLink="experience/edit/{{ item.idExperience }}"
               >
-            </p>
+                <i class="far fa-edit"></i> Editar
+              </a>
+              <a
+                class="deletebutton"
+                (click)="deleteExperience(item.idExperience)"
+              >
+                <i class="far fa-trash-alt"></i> Borrar
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="card my-3"
-        data-aos="fade-right"
-        data-aos-duration="2000"
-        *ngIf="i % 2 === 1"
-      >
-        <div class="row">
-          <div class="col-lg-4 title">
-            <div class="py-5 px-5">
-              <h4 class="fw-bold pb-2" [innerHTML]="item.title"></h4>
-              <h6 [innerHTML]="item.subtitle"></h6>
+        <div
+          class="card my-3"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+          *ngIf="i % 2 === 1"
+        >
+          <div class="row">
+            <div class="col-lg-4 title">
+              <div class="py-5 px-5">
+                <h4 class="fw-bold pb-2" [innerHTML]="item.title"></h4>
+                <h6 [innerHTML]="item.subtitle"></h6>
+              </div>
+            </div>
+            <div class="col-lg-8 py-5 px-5">
+              <p>{{ item.when }}<br />{{ item.where }}</p>
+              <p>
+                <span [innerHTML]="item.text"></span>
+                <a
+                  *ngIf="item.link1 != ''"
+                  href="{{ item.url1 }}"
+                  target="blank"
+                  ><br />{{ item.link1 }}<br
+                /></a>
+                <a
+                  *ngIf="item.link2 != ''"
+                  href="{{ item.url2 }}"
+                  target="blank"
+                  >{{ item.link2 }}<br
+                /></a>
+                <a
+                  *ngIf="item.link3 != ''"
+                  href="{{ item.url3 }}"
+                  target="blank"
+                  >{{ item.link3 }}</a
+                >
+              </p>
             </div>
           </div>
-          <div class="col-lg-8 py-5 px-5">
-            <p>{{ item.when }}<br />{{ item.where }}</p>
-            <p>
-              <span [innerHTML]="item.text"></span>
-              <a *ngIf="item.link1 != ''" href="{{ item.url1 }}" target="blank"
-                ><br />{{ item.link1 }}<br
-              /></a>
-              <a *ngIf="item.link2 != ''" href="{{ item.url2 }}" target="blank"
-                >{{ item.link2 }}<br
-              /></a>
+          <div class="row">
+            <div class="col">
               <a
-                *ngIf="item.link3 != ''"
-                href="{{ item.url3 }}"
-                target="blank"
-                >{{ item.link3 }}</a
+                class="editbutton"
+                routerLink="/experience/edit/{{ item.idExperience }}"
               >
-            </p>
+                <i class="far fa-edit"></i> Editar
+              </a>
+              <a
+                class="deletebutton"
+                (click)="deleteExperience(item.idExperience)"
+              >
+                <i class="far fa-trash-alt"></i> Borrar
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <a class="createbutton" routerLink="/experience/create/{{ idPerson }}">
+      <i class="fas fa-plus-circle"></i> Nueva Experiencia
+    </a>
   </div>
 </section>

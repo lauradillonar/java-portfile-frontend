@@ -25,3 +25,38 @@
     background-color: #d4f2d5;
 }
 
+a{
+    color: #b89462;
+    text-decoration: none;
+}
+
+a:visited{
+    color: #b89462;
+}
+
+a:hover {
+    font-weight: 700;
+}
+
+
+.deletebutton{
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    margin: -10px 0 0 -10px;
+}
+
+.editbutton{
+    position: absolute;
+    bottom: 1rem;
+    right: 6rem;
+    cursor:pointer;
+    margin: -10px 0 0 -10px;
+}
+
+.createbutton{
+    cursor: pointer;
+    margin: 2rem 2rem 2rem 2rem;
+}
+

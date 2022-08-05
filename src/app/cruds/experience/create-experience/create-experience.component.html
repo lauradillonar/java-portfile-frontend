@@ -1,1 +1,140 @@
-<p>create-experience works!</p>
+<app-navbar [idPerson]="idPerson"></app-navbar>
+<div class="initial"></div>
+
+<div class="container">
+  <h1 class="text-center py-5">{{ lang?.experience?.title }}</h1>
+  <div class="row mt-5">
+    <div class="col-md-4 mx-auto">
+      <div class="card my-3 py-5 px-5">
+        <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group mb-3">
+            <label for="title">{{ label?.title }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="title"
+              name="title"
+              [(ngModel)]="title"
+              required
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="subtitle">{{ label?.subtitle }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="subtitle"
+              name="subtitle"
+              [(ngModel)]="subtitle"
+              required
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="when">{{ label?.when }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="when"
+              name="when"
+              [(ngModel)]="when"
+              required
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="where">{{ label?.where }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="where"
+              name="where"
+              [(ngModel)]="where"
+              required
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="text">{{ label?.text }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="text"
+              name="text"
+              [(ngModel)]="text"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="link1">{{ label?.link1 }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="link1"
+              name="link1"
+              [(ngModel)]="link1"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="url1">{{ label?.url1 }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="url1"
+              name="url1"
+              [(ngModel)]="url1"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="link2">{{ label?.link2 }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="link2"
+              name="link2"
+              [(ngModel)]="link2"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="url2">{{ label?.url2 }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="url2"
+              name="url2"
+              [(ngModel)]="url2"
+            />
+          </div>
+          <div class="form-group mb-3">
+            <label for="link3">{{ label?.link3 }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="link3"
+              name="link3"
+              [(ngModel)]="link3"
+            />
+          </div>
+          <div class="form-group">
+            <label for="url3">{{ label?.url3 }} </label>
+            <input
+              type="text"
+              class="form-control"
+              id="url3"
+              name="url3"
+              [(ngModel)]="url3"
+            />
+          </div>
+          <button class="createbutton" type="submit" [disabled]="!f.valid">
+            <i class="fas fa-plus-circle"></i> {{ label?.createbutton }}
+          </button>
+          <button
+            class="cancelbutton"
+            type="button"
+            routerLink="/{{ idPerson }}/home"
+            fragment="experience"
+          >
+            <i class="fas fa-arrow-alt-circle-left"></i>
+            {{ label?.cancelbutton }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

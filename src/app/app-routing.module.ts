@@ -27,7 +27,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'experience/create',
+    path: 'experience/create/:idPerson',
     component: CreateExperienceComponent
   },
   {

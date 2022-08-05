@@ -462,6 +462,21 @@
                 },
         "experience": {
                         "title": "Experiencia.",
+                        "label": {
+                            "title": "Título",
+                            "subtitle": "Subtítulo",
+                            "when": "Período",
+                            "where": "Lugar",
+                            "text": "Descripción breve (opcional)",
+                            "link1": "Texto del enlace 1 (opcional)",
+                            "url1": "Enlace 1 (opcional)",
+                            "link2": "Texto del enlace 2 (opcional)",
+                            "url2": "Enlace 2 (opcional)",
+                            "link3": "Texto del enlace 3 (opcional)",
+                            "url3": "Enlace 3 (opcional)",
+                            "createbutton": "Guardar",
+                            "cancelbutton": "Volver"
+                        },
                         "cards":[
                                     {
                                     "title":"ConFluencia Creativa",

@@ -19,9 +19,10 @@ export class ExperienceComponent implements OnInit {
   items:any = [];
   @Input() idPerson?: number;
   experiences: Experience[] = [];
+  hasExperience: boolean = false;
 
   ngOnInit(): void {
-    console.log("experience.component.ts init");
+    
     this.data.getData().subscribe(data =>{
       this.myPortfile=data;
       this.lang = this.myPortfile.es;
@@ -31,16 +32,21 @@ export class ExperienceComponent implements OnInit {
   }
 
   listExperience(): void{
-    console.log("ExperienceComponent: idPerson ", this.idPerson);
+
     if (this.idPerson){
       this.experienceService.getByPerson(this.idPerson).subscribe(
         data => {
           this.experiences = data;
+          this.hasExperience = true;
         },
         err => {
           console.log(err);
         }
       );
     }
+  }
+
+  deleteExperience(idExperience?: number): void {
+    console.log("Borrar experiencia ",idExperience);
   }
 }
