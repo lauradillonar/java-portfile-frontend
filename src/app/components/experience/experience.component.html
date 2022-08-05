@@ -43,20 +43,24 @@
           </div>
           <div class="row">
             <div class="col">
-              <a
+              <button
+                type="button"
                 class="editbutton"
                 routerLink="/{{ idPerson }}/experience/edit/{{
                   item.idExperience
                 }}"
               >
-                <i class="far fa-edit"></i> Editar
-              </a>
-              <a
+                <i class="far fa-edit"></i>
+                {{ lang?.experience?.label?.cardEditButton }}
+              </button>
+              <button
+                type="button"
                 class="deletebutton"
                 (click)="deleteExperience(item.idExperience)"
               >
-                <i class="far fa-trash-alt"></i> Borrar
-              </a>
+                <i class="far fa-trash-alt"></i>
+                {{ lang?.experience?.label?.cardDeleteButton }}
+              </button>
             </div>
           </div>
         </div>
@@ -100,27 +104,36 @@
           </div>
           <div class="row">
             <div class="col">
-              <a
+              <button
+                type="button"
                 class="editbutton"
                 routerLink="/{{ idPerson }}/experience/edit/{{
                   item.idExperience
                 }}"
               >
-                <i class="far fa-edit"></i> Editar
-              </a>
-              <a
+                <i class="far fa-edit"></i>
+                {{ lang?.experience?.label?.cardEditButton }}
+              </button>
+              <button
+                type="button"
                 class="deletebutton"
                 (click)="deleteExperience(item.idExperience)"
               >
-                <i class="far fa-trash-alt"></i> Borrar
-              </a>
+                <i class="far fa-trash-alt"></i>
+                {{ lang?.experience?.label?.cardDeleteButton }}
+              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <a class="createbutton" routerLink="/{{ idPerson }}/experience/create">
-      <i class="fas fa-plus-circle"></i> Nueva Experiencia
-    </a>
+    <button
+      type="button"
+      class="createbutton"
+      routerLink="/{{ idPerson }}/experience/create"
+    >
+      <i class="fas fa-plus-circle"></i>
+      {{ lang?.experience?.label?.cardNewButton }}
+    </button>
   </div>
 </section>

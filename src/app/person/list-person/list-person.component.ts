@@ -30,7 +30,7 @@ export class ListPersonComponent implements OnInit {
   }
 
   deletePerson(idPerson?: number){
-    if (idPerson != undefined){
+    if (idPerson){
     this.personService.delete(idPerson).subscribe(
       data => {
         Swal.fire("Persona dada de baja", "Listo", "success");

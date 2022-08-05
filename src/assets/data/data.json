@@ -474,12 +474,13 @@
                             "url2": "Enlace 2 (opcional)",
                             "link3": "Texto del enlace 3 (opcional)",
                             "url3": "Enlace 3 (opcional)",
-                            "createbutton": "Guardar",
-                            "cancelbutton": "Volver",
-                            "editbutton": "Actualizar",
-                            "deletebutton": "Borrar",
-                            "cardeditbutton": "Editar",
-                            "carddeletebutton": "Borrar"
+                            "createButton": "Guardar",
+                            "cancelButton": "Volver",
+                            "editButton": "Actualizar",
+                            "deleteButton": "Borrar",
+                            "cardEditButton": "Editar",
+                            "cardDeleteButton": "Borrar",
+                            "cardNewButton": "Nueva Experiencia"
                         },
                         "cards":[
                                     {

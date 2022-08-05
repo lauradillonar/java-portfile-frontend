@@ -33,9 +33,8 @@ export class ExperienceService {
     return this.httpClient.put<any>(this.experienceURL + `update/${idExperience}`, experience);
   }
 
-  // public delete(idExperience: number): Observable<any>{
-  //   return this.httpClient.delete<any>(this.experienceURL + `delete/${idExperience}`);
-  // }
-  // Falta crear método en backend
+  public delete(idExperience: number): Observable<any>{
+    return this.httpClient.delete<any>(this.experienceURL + `delete/${idExperience}`);
+  }
 
 }

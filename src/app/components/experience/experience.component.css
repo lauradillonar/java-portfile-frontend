@@ -40,23 +40,36 @@ a:hover {
 
 
 .deletebutton{
+    background-color: transparent;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
     cursor: pointer;
     margin: -10px 0 0 -10px;
+    border: none;
+    outline: none;
+    color: #616161;
 }
 
 .editbutton{
+    background-color: transparent;
     position: absolute;
     bottom: 1rem;
     right: 6rem;
     cursor:pointer;
     margin: -10px 0 0 -10px;
+    border: none;
+    outline: none;
+    color: #616161;
 }
 
 .createbutton{
+    background-color: transparent;
     cursor: pointer;
     margin: 2rem 2rem 2rem 2rem;
+    border: none;
+    outline: none;
+    color: #616161;
+
 }
 

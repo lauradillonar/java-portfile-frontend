@@ -25,6 +25,8 @@
           class="nav-link px-lg-2 rounded"
           routerLink="/{{ idPerson }}/{{ lang?.navbar?.home?.url }}"
           fragment="{{ lang?.navbar?.home?.fragment }}"
+          data-bs-toggle="collapse"
+          data-bs-target=".navbar-collapse.show"
           >{{ lang?.navbar?.home?.link }}</a
         >
         <div *ngFor="let item of items">
@@ -32,6 +34,8 @@
             class="nav-link px-lg-2 rounded"
             routerLink="/{{ idPerson }}/{{ item?.url }}"
             fragment="{{ item?.fragment }}"
+            data-bs-toggle="collapse"
+            data-bs-target=".navbar-collapse.show"
             >{{ item?.link }}</a
           >
         </div>

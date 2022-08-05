@@ -1,3 +1,4 @@
+import Swal from 'sweetalert2';
 import { Experience } from './../../models/experience';
 import { ExperienceService } from './../../services/experience.service';
 import { Component, Input, OnInit } from '@angular/core';
@@ -47,6 +48,17 @@ export class ExperienceComponent implements OnInit {
   }
 
   deleteExperience(idExperience?: number): void {
-    console.log("Borrar experiencia ",idExperience);
+
+    if(idExperience){
+      this.experienceService.delete(idExperience).subscribe(
+        data => {
+          Swal.fire("Experiencia borrada", "Listo", "success");
+          this.listExperience();
+        },
+        err => {
+          Swal.fire("Ops...", err.error.message, "error");
+        }
+      );
+    }
   }
 }
