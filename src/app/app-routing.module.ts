@@ -27,11 +27,11 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'experience/create/:idPerson',
+    path: ':idPerson/experience/create',
     component: CreateExperienceComponent
   },
   {
-    path: 'experience/edit/:idExperience',
+    path: ':idPerson/experience/edit/:idExperience',
     component: EditExperienceComponent
   },
   {

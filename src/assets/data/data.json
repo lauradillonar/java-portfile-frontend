@@ -475,7 +475,11 @@
                             "link3": "Texto del enlace 3 (opcional)",
                             "url3": "Enlace 3 (opcional)",
                             "createbutton": "Guardar",
-                            "cancelbutton": "Volver"
+                            "cancelbutton": "Volver",
+                            "editbutton": "Actualizar",
+                            "deletebutton": "Borrar",
+                            "cardeditbutton": "Editar",
+                            "carddeletebutton": "Borrar"
                         },
                         "cards":[
                                     {

@@ -45,7 +45,9 @@
             <div class="col">
               <a
                 class="editbutton"
-                routerLink="experience/edit/{{ item.idExperience }}"
+                routerLink="/{{ idPerson }}/experience/edit/{{
+                  item.idExperience
+                }}"
               >
                 <i class="far fa-edit"></i> Editar
               </a>
@@ -100,7 +102,9 @@
             <div class="col">
               <a
                 class="editbutton"
-                routerLink="/experience/edit/{{ item.idExperience }}"
+                routerLink="/{{ idPerson }}/experience/edit/{{
+                  item.idExperience
+                }}"
               >
                 <i class="far fa-edit"></i> Editar
               </a>
@@ -115,7 +119,7 @@
         </div>
       </div>
     </div>
-    <a class="createbutton" routerLink="/experience/create/{{ idPerson }}">
+    <a class="createbutton" routerLink="/{{ idPerson }}/experience/create">
       <i class="fas fa-plus-circle"></i> Nueva Experiencia
     </a>
   </div>

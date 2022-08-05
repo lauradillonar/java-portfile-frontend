@@ -46,7 +46,7 @@ export class CreateExperienceComponent implements OnInit {
         this.lang = this.myPortfile.es;
         this.label = this.lang.experience.label;
       }
-    )
+    );
   }
 
   onCreate(): void {

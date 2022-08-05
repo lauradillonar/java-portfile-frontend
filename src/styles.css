@@ -26,13 +26,14 @@ p{
 }
 
 .axis{
-    position: absolute;
+    text-align: center;
 }
 
 .cfc{
-    margin-top: 45vh;
-    margin-left: 45vw;
+    display: inline;
+    margin:50px auto;
 }
+
 
 .rotate360cw {
     animation: load 7s;
