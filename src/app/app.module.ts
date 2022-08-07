@@ -28,6 +28,7 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { CreateExperienceComponent } from './cruds/experience/create-experience/create-experience.component';
 import { EditExperienceComponent } from './cruds/experience/edit-experience/edit-experience.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

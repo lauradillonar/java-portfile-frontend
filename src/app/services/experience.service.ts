@@ -1,3 +1,4 @@
+import { ExperiencePerson } from './../models/experience-person';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
@@ -25,12 +26,12 @@ export class ExperienceService {
     return this.httpClient.get<Experience[]>(this.experienceURL + `person/${idPerson}`);
   }
 
-  public save(experience: Experience): Observable<any>{
-    return this.httpClient.post<any>(this.experienceURL + 'save', experience);
+  public save(experience: Experience, idPerson: number): Observable<any>{
+    return this.httpClient.post<any>(this.experienceURL + `save/${idPerson}`, experience);
   }
 
-  public update(idExperience: number, experience: Experience): Observable<any>{
-    return this.httpClient.put<any>(this.experienceURL + `update/${idExperience}`, experience);
+  public update(idExperience: number, experience: Experience, idPerson: number): Observable<any>{
+    return this.httpClient.put<any>(this.experienceURL + `update/${idPerson}/${idExperience}`, experience);
   }
 
   public delete(idExperience: number): Observable<any>{

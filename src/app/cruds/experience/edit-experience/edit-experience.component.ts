@@ -58,8 +58,8 @@ export class EditExperienceComponent implements OnInit {
   }
 
   onUpdate(): void {
-    if(this.experience.idExperience){
-      this.experienceService.update(this.experience.idExperience, this.experience).subscribe(
+    if(this.experience.idExperience && this.idPerson){
+      this.experienceService.update(this.experience.idExperience, this.experience, this.idPerson).subscribe(
         data => {
           Swal.fire("Datos Actualizados", "Listo", "success");
           this.router.navigate(['/'+this.idPerson+'/home',{fragment: 'experience'}]);

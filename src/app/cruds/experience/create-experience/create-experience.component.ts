@@ -65,7 +65,7 @@ export class CreateExperienceComponent implements OnInit {
       this.url3
     );
 
-    this.experienceService.save(experience).subscribe(
+    this.experienceService.save(experience, this.idPerson).subscribe(
       data => {
         Swal.fire("Experiencia Guardada", "Listo", "success");
         this.router.navigate(['/'+this.idPerson+'/home',{fragment: 'experience'}]);
