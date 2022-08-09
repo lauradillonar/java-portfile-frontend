@@ -50,7 +50,7 @@ const routes: Routes = [
     component: EditEducationComponent
   },
   {
-    path: ':idPerson/education',
+    path: ':idPerson/educations',
     component: EducationComponent
   },
   {
