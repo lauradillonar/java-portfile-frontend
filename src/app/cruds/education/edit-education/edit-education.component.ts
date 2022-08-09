@@ -15,6 +15,7 @@ export class EditEducationComponent implements OnInit {
   education!: Education;
   idPerson?: number;
   idEducation?: number;
+  hasEducation: boolean = false;
 
   myPortfile: any;
   lang: any;
@@ -47,6 +48,7 @@ export class EditEducationComponent implements OnInit {
             this.router.navigate(['/']);
           } else {
             this.education = data;
+            this.hasEducation = true;
           }
         },
         err => {

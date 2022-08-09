@@ -15,6 +15,7 @@ export class EditExperienceComponent implements OnInit {
   experience!: Experience;
   idPerson?: number;
   idExperience?: number;
+  hasExperience: boolean = false;
 
   myPortfile: any;
   lang: any;
@@ -47,6 +48,7 @@ export class EditExperienceComponent implements OnInit {
             this.router.navigate(['/']);
           } else {
             this.experience = data;
+            this.hasExperience = true;
           }
         },
         err => {
