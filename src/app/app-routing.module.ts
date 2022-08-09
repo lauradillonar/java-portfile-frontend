@@ -1,3 +1,6 @@
+import { EducationComponent } from './components/education/education.component';
+import { EditEducationComponent } from './cruds/education/edit-education/edit-education.component';
+import { CreateEducationComponent } from './cruds/education/create-education/create-education.component';
 import { HomeComponent } from './components/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -37,6 +40,18 @@ const routes: Routes = [
   {
     path: ':idPerson/experiences',
     component: ExperienceComponent
+  },
+  {
+    path: ':idPerson/education/create',
+    component: CreateEducationComponent
+  },
+  {
+    path: ':idPerson/education/edit/:idEducation',
+    component: EditEducationComponent
+  },
+  {
+    path: ':idPerson/education',
+    component: EducationComponent
   },
   {
     path: '**',

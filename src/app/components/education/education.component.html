@@ -1,69 +1,121 @@
 <section id="education" class="education py-5">
   <div class="container py-5">
     <h1 class="text-center py-5">{{ lang?.education?.title }}</h1>
-    <div class="row pb-3">
-      <div class="col-lg-4 my-3" *ngFor="let item of items; index as i">
-        <div
-          class="card my-2"
-          data-aos="fade-down"
-          data-aos-duration="2000"
-          *ngIf="i % 3 === 0 || i % 3 === 2"
-        >
-          <div class="title-ed py-5 px-5">
-            <h4 class="fw-bold" [innerHTML]="item?.title"></h4>
-            <h6 class="fw-bold" [innerHTML]="item?.when"></h6>
-            <p class="pt-3" [innerHTML]="item?.subtitle"></p>
-            <p *ngIf="item?.text1 != ''" [innerHTML]="item?.text1"></p>
-            <p *ngIf="item?.link != ''">
-              <a
-                href="{{ item?.url }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ item?.link }}</a
+    <div *ngIf="hasEducation">
+      <div class="row pb-3">
+        <div class="col-lg-4 my-3" *ngFor="let item of educations; index as i">
+          <div
+            class="card my-2"
+            data-aos="fade-down"
+            data-aos-duration="2000"
+            *ngIf="i % 3 === 0 || i % 3 === 2"
+          >
+            <div class="title-ed py-5 px-5">
+              <h4 class="fw-bold" [innerHTML]="item.title"></h4>
+              <h6 class="fw-bold" [innerHTML]="item.when"></h6>
+              <p class="pt-3" [innerHTML]="item?.subtitle"></p>
+              <p *ngIf="item.text1 != ''" [innerHTML]="item.text1"></p>
+              <p *ngIf="item.link != ''">
+                <a
+                  href="{{ item.url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >{{ item?.link }}</a
+                >
+              </p>
+              <p *ngIf="item.text2 != ''" [innerHTML]="item.text2"></p>
+              <p *ngIf="item.viewmore != ''">
+                <a
+                  class="viewmore"
+                  href="{{ item.viewmore }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><br />
+                  <i class="far fa-eye"></i>
+                  {{ lang?.education?.label?.cardViewmoreButton }}</a
+                >
+              </p>
+              <button
+                type="button"
+                class="editbutton"
+                routerLink="/{{ idPerson }}/education/edit/{{
+                  item.idEducation
+                }}"
               >
-            </p>
-            <p *ngIf="item?.text1 != ''" [innerHTML]="item?.text2"></p>
-            <p class="viewmore" *ngIf="item?.viewmore != ''">
-              <a
-                href="{{ item?.viewmore }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><br />{{ item?.viewmoretext }}</a
+                <i class="far fa-edit"></i>
+                {{ lang?.education?.label?.cardEditButton }}
+              </button>
+              <button
+                type="button"
+                class="deletebutton"
+                (click)="deleteEducation(item.idEducation)"
               >
-            </p>
+                <i class="far fa-trash-alt"></i>
+                {{ lang?.education?.label?.cardDeleteButton }}
+              </button>
+            </div>
           </div>
-        </div>
-        <div
-          class="card my-2"
-          data-aos="fade-up"
-          data-aos-duration="2000"
-          *ngIf="i % 3 === 1"
-        >
-          <div class="title-ed py-5 px-5">
-            <h4 class="fw-bold" [innerHTML]="item?.title"></h4>
-            <h6 class="fw-bold" [innerHTML]="item?.when"></h6>
-            <p class="pt-3" [innerHTML]="item?.subtitle"></p>
-            <p *ngIf="item?.text1 != ''" [innerHTML]="item?.text1"></p>
-            <p *ngIf="item?.link != ''">
-              <a
-                href="{{ item?.url }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                >{{ item?.link }}</a
+          <div
+            class="card my-2"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            *ngIf="i % 3 === 1"
+          >
+            <div class="title-ed py-5 px-5">
+              <h4 class="fw-bold" [innerHTML]="item.title"></h4>
+              <h6 class="fw-bold" [innerHTML]="item.when"></h6>
+              <p class="pt-3" [innerHTML]="item?.subtitle"></p>
+              <p *ngIf="item.text1 != ''" [innerHTML]="item.text1"></p>
+              <p *ngIf="item.link != ''">
+                <a
+                  href="{{ item.url }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >{{ item?.link }}</a
+                >
+              </p>
+              <p *ngIf="item.text2 != ''" [innerHTML]="item.text2"></p>
+              <p *ngIf="item.viewmore != ''">
+                <a
+                  class="viewmore"
+                  href="{{ item.viewmore }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><br />
+                  <i class="far fa-eye"></i>
+                  {{ lang?.education?.label?.cardViewmoreButton }}</a
+                >
+              </p>
+              <button
+                type="button"
+                class="editbutton"
+                routerLink="/{{ idPerson }}/education/edit/{{
+                  item.idEducation
+                }}"
               >
-            </p>
-            <p *ngIf="item?.text1 != ''" [innerHTML]="item?.text2"></p>
-            <p class="viewmore" *ngIf="item?.viewmore != ''">
-              <a
-                href="{{ item?.viewmore }}"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><br />{{ item?.viewmoretext }}</a
+                <i class="far fa-edit"></i>
+                {{ lang?.education?.label?.cardEditButton }}
+              </button>
+              <button
+                type="button"
+                class="deletebutton"
+                (click)="deleteEducation(item.idEducation)"
               >
-            </p>
+                <i class="far fa-trash-alt"></i>
+                {{ lang?.education?.label?.cardDeleteButton }}
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <button
+      type="button"
+      class="createbutton"
+      routerLink="/{{ idPerson }}/education/create"
+    >
+      <i class="fas fa-plus-circle"></i>
+      {{ lang?.education?.label?.cardNewButton }}
+    </button>
   </div>
 </section>

@@ -1,5 +1,8 @@
 <nav class="navbar navbar-expand-lg fixed-top text-uppercase">
   <div class="container">
+    <a class="navbar-brand" routerLink="{{ lang?.argentina?.url }}"
+      ><img src="{{ lang?.argentina?.src }}" alt="{{ lang?.argentina?.alt }}"
+    /></a>
     <div *ngIf="isPerson">
       <a
         class="navbar-brand"

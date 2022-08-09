@@ -305,6 +305,11 @@
 ,
 
     "es": {
+        "argentina":{
+            "src": "./assets/img/APLogo-83-136.jpg",
+            "alt": "Argentina Programa",
+            "url": ""
+        },
         "logo": {
             "src":"./assets/img/cfc94.png",
             "alt":"ConFluencia Creativa",
@@ -463,7 +468,7 @@
         "experience": {
                         "title": "Experiencia.",
                         "label": {
-                            "title": "Título",
+                            "title": "Título de la experiencia realizada",
                             "subtitle": "Subtítulo",
                             "when": "Período",
                             "where": "Lugar",
@@ -552,6 +557,24 @@
                 },
         "education": {
                         "title": "Educación.",
+                        "label": {
+                            "title": "Título o logro alcanzado en educación",
+                            "when": "Período: Fecha inicio - Fecha fin",
+                            "subtitle": "Nombre de la Institución",
+                            "text1": "Descripción o comentarios breves (opcional)",
+                            "link": "Texto de un enlace (opcional)",
+                            "url": "Enlace (opcional)",
+                            "text2": "Otro texto breve (opcional)",
+                            "viewmore": "Enlace para botón Ver Más (opcional)",
+                            "createButton": "Guardar",
+                            "cancelButton": "Volver",
+                            "editButton": "Actualizar",
+                            "deleteButton": "Borrar",
+                            "cardEditButton": "Editar",
+                            "cardDeleteButton": "Borrar",
+                            "cardNewButton": "Nuevos datos de educación",
+                            "cardViewmoreButton": "Ver más"
+                        },
                         "cards": [
                                     {
                                         "title": "Inglés para el desarrollo de software",

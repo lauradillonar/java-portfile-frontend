@@ -27,6 +27,8 @@ import { EditPersonComponent } from './person/edit-person/edit-person.component'
 import { SkillsComponent } from './components/skills/skills.component';
 import { CreateExperienceComponent } from './cruds/experience/create-experience/create-experience.component';
 import { EditExperienceComponent } from './cruds/experience/edit-experience/edit-experience.component';
+import { CreateEducationComponent } from './cruds/education/create-education/create-education.component';
+import { EditEducationComponent } from './cruds/education/edit-education/edit-education.component';
 
 
 @NgModule({
@@ -47,7 +49,9 @@ import { EditExperienceComponent } from './cruds/experience/edit-experience/edit
     EditPersonComponent,
     SkillsComponent,
     CreateExperienceComponent,
-    EditExperienceComponent
+    EditExperienceComponent,
+    CreateEducationComponent,
+    EditEducationComponent
   ],
   imports: [
     BrowserModule,
