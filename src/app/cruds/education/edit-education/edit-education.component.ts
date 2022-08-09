@@ -32,7 +32,7 @@ export class EditEducationComponent implements OnInit {
       data => {
         this.myPortfile = data;
         this.lang = this.myPortfile.es;
-        this.lang = this.lang.education.label;
+        this.label = this.lang.education.label;
       }
     );
 
