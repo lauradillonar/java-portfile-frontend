@@ -61,11 +61,11 @@ export class CreateEducationComponent implements OnInit {
     this.educationService.save(education, this.idPerson).subscribe(
       data => {
         Swal.fire("Datos de educación guardados", "Listo", "success");
-        this.router.navigate(['/'+this.idPerson+'/home',{fragment: 'education'}]);
+        this.router.navigate([`/${this.idPerson}/home`],{fragment: 'education'});
       },
       err => {
         Swal.fire("Ops...", err.error.message, "error");
-        this.router.navigate(['/'+this.idPerson+'/home',{fragment: 'education'}]);
+        this.router.navigate([`/${this.idPerson}/home`],{fragment: 'education'});
       }
     );
   }

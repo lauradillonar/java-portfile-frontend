@@ -51,7 +51,7 @@ export class EditExperienceComponent implements OnInit {
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate(['/'+this.idPerson+'/home',{fragment: 'experience'}]);
+          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'experience'});
         }
       );
     }
@@ -62,11 +62,11 @@ export class EditExperienceComponent implements OnInit {
       this.experienceService.update(this.experience.idExperience, this.experience, this.idPerson).subscribe(
         data => {
           Swal.fire("Datos Actualizados", "Listo", "success");
-          this.router.navigate(['/'+this.idPerson+'/home',{fragment: 'experience'}]);
+          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'experience'});
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate(['/'+this.idPerson+'/home',{fragment: 'experience'}]);
+          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'experience'});
         }
       );
     }
