@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class ListPersonComponent implements OnInit {
 
   persons: Person[] = [];
+  hasPersons: boolean = false;
 
   constructor(private personService: PersonService) { }
 
@@ -22,6 +23,7 @@ export class ListPersonComponent implements OnInit {
     this.personService.list().subscribe(
       data => {
         this.persons = data;
+        this.hasPersons = true;
       },
       err => {
         console.log(err);

@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class EditPersonComponent implements OnInit {
 
   person!: Person;
+  hasPersons: boolean = false;
 
   constructor(
     private personService: PersonService,
@@ -24,6 +25,7 @@ export class EditPersonComponent implements OnInit {
     this.personService.home(idPerson).subscribe(
       data => {
         this.person = data;
+        this.hasPersons = true;
       },
       err => {
         Swal.fire("Ops...",err.error.message, "error");

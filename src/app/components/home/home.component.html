@@ -1,9 +1,17 @@
-<app-navbar [idPerson]="idPerson"></app-navbar>
-<app-hello [isPerson]="isPerson" [person]="person"></app-hello>
-<app-aboutme [isPerson]="isPerson" [person]="person"></app-aboutme>
-<app-experience [idPerson]="idPerson"></app-experience>
-<app-education [idPerson]="idPerson"></app-education>
-<app-skills></app-skills>
-<app-projects></app-projects>
-<app-contact></app-contact>
-<app-footer></app-footer>
+<app-navbar [idPerson]="idPerson"><div class="preloader"></div></app-navbar>
+<app-hello [isPerson]="isPerson" [person]="person"
+  ><div class="preloader"></div
+></app-hello>
+<app-aboutme [isPerson]="isPerson" [person]="person"
+  ><div class="preloader"></div
+></app-aboutme>
+<app-experience [idPerson]="idPerson"
+  ><div class="preloader"></div
+></app-experience>
+<app-education [idPerson]="idPerson"
+  ><div class="preloader"></div
+></app-education>
+<app-skills><div class="preloader"></div></app-skills>
+<app-projects><div class="preloader"></div></app-projects>
+<app-contact><div class="preloader"></div></app-contact>
+<app-footer><div class="preloader"></div></app-footer>

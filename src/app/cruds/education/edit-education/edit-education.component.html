@@ -3,6 +3,7 @@
 
 <div class="container">
   <h1 class="text-center py-5">{{ lang?.education?.title }}</h1>
+  <div class="preloader" *ngIf="!hasEducation"></div>
   <div *ngIf="hasEducation">
     <div class="row my-5">
       <div class="col-md-8 mx-auto">
