@@ -4,7 +4,7 @@
 }
 
 .nav-link{
-    color: #b89462;
+    color: #775f3e;
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
@@ -12,7 +12,7 @@
 }
 
 .nav-link:visited{
-    color: #b89462;
+    color: #775f3e;
     background-color: white; 
 }
 
@@ -25,14 +25,14 @@
 .navbar-brand{
     font-size: 1.25rem;
     font-weight: 800;
-    color: #b89462;
+    color: #775f3e;
     cursor: pointer;
     text-decoration:none;
     height: 94px;
 }
 
 .navbar-toggler-icon{
-    color:#b89462;
+    color:#775f3e;
     font-size: 1.5rem;
     padding-top: .3rem;
     padding-left: .2rem;
