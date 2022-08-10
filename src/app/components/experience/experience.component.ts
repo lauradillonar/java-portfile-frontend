@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Experience } from './../../models/experience';
 import { ExperienceService } from './../../services/experience.service';
@@ -13,7 +14,8 @@ export class ExperienceComponent implements OnInit {
 
   constructor(
     private data: PortfileService,
-    private experienceService: ExperienceService) { }
+    private experienceService: ExperienceService,
+    private router: Router) { }
 
   myPortfile:any;
   lang: any;
@@ -54,6 +56,7 @@ export class ExperienceComponent implements OnInit {
         data => {
           Swal.fire("Experiencia borrada", "Listo", "success");
           this.listExperience();
+          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'experience'});
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");

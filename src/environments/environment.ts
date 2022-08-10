@@ -9,6 +9,7 @@ export const environment = {
   personURL: 'http://localhost:8088/portfile/api/persons/',
   experienceURL: "http://localhost:8088/portfile/api/experiences/",
   educationURL: "http://localhost:8088/portfile/api/educations/",
+  skillURL: "http://localhost:8088/portfile/api/skills/",
   firebaseConfig : {
     apiKey: "AIzaSyChMYnOt8YA_Q9AzK_JjzqCwSHb89KcMRk",
     authDomain: "lvd-portfile.firebaseapp.com",

@@ -1,8 +1,9 @@
+import { Router } from '@angular/router';
 import { Education } from './../../models/education';
 import { EducationService } from './../../services/education.service';
-import Swal from 'sweetalert2';
 import { Component, Input, OnInit } from '@angular/core';
 import { PortfileService } from 'src/app/services/portfile.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-education',
@@ -13,7 +14,8 @@ export class EducationComponent implements OnInit {
 
   constructor(
     private data: PortfileService,
-    private educationService: EducationService) { }
+    private educationService: EducationService,
+    private router: Router) { }
 
   myPortfile:any;
   lang: any;
@@ -53,6 +55,7 @@ export class EducationComponent implements OnInit {
         data => {
           Swal.fire("Datos de educación borrados", "Listo", "success");
           this.listEducation();
+          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'education'});
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");

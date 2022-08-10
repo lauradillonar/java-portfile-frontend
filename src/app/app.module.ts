@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HelloComponent } from './components/hello/hello.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
-import { ProjectsComponent } from './components/projects/projects.component';
+import { ProjectComponent } from './components/project/project.component';
 import { ExperienceComponent } from './components/experience/experience.component';
 import { EducationComponent } from './components/education/education.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -24,11 +24,13 @@ import { BlogComponent } from './components/blog/blog.component';
 import { ListPersonComponent } from './person/list-person/list-person.component';
 import { CreatePersonComponent } from './person/create-person/create-person.component';
 import { EditPersonComponent } from './person/edit-person/edit-person.component';
-import { SkillsComponent } from './components/skills/skills.component';
+import { SkillComponent } from './components/skill/skill.component';
 import { CreateExperienceComponent } from './cruds/experience/create-experience/create-experience.component';
 import { EditExperienceComponent } from './cruds/experience/edit-experience/edit-experience.component';
 import { CreateEducationComponent } from './cruds/education/create-education/create-education.component';
 import { EditEducationComponent } from './cruds/education/edit-education/edit-education.component';
+import { CreateSkillComponent } from './cruds/skill/create-skill/create-skill.component';
+import { EditSkillComponent } from './cruds/skill/edit-skill/edit-skill.component';
 
 
 @NgModule({
@@ -37,7 +39,7 @@ import { EditEducationComponent } from './cruds/education/edit-education/edit-ed
     NavbarComponent,
     HelloComponent,
     AboutmeComponent,
-    ProjectsComponent,
+    ProjectComponent,
     ExperienceComponent,
     EducationComponent,
     ContactComponent,
@@ -47,11 +49,13 @@ import { EditEducationComponent } from './cruds/education/edit-education/edit-ed
     ListPersonComponent,
     CreatePersonComponent,
     EditPersonComponent,
-    SkillsComponent,
+    SkillComponent,
     CreateExperienceComponent,
     EditExperienceComponent,
     CreateEducationComponent,
-    EditEducationComponent
+    EditEducationComponent,
+    CreateSkillComponent,
+    EditSkillComponent
   ],
   imports: [
     BrowserModule,

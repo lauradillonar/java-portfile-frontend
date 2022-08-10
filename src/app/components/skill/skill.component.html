@@ -1,0 +1,60 @@
+<section id="skills" class="skills py-5 bg-light">
+  <div class="container py-5">
+    <h1 class="text-center py-5">{{ lang?.skills?.title }}</h1>
+    <div class="preloader" *ngIf="!hasSkill"></div>
+    <div *ngIf="hasSkill">
+      <div class="row">
+        <div class="col-12 pt-3">
+          <div class="progress-block">
+            <div *ngFor="let item of skills; index as i">
+              <div class="row">
+                <div class="progress my-1">
+                  <div *ngFor="let value of values">
+                    <div
+                      *ngIf="item.progress === value"
+                      class="pro-value{{ value }} ps-2"
+                    >
+                      <p>
+                        {{ item.item }}
+                        <span text-white float-right>
+                          {{ item.progress }}%</span
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="buttons pt-5">
+                  <button
+                    type="button"
+                    class="editbutton"
+                    routerLink="/{{ idPerson }}/skill/edit/{{ item.idSkill }}"
+                  >
+                    <i class="far fa-edit"></i>
+                    {{ lang?.skills?.label?.cardEditButton }}
+                  </button>
+                  <button
+                    type="button"
+                    class="deletebutton"
+                    (click)="deleteSkill(item.idSkill)"
+                  >
+                    <i class="far fa-trash-alt"></i>
+                    {{ lang?.skills?.label?.cardDeleteButton }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="createbutton"
+      routerLink="/{{ idPerson }}/skill/create"
+    >
+      <i class="fas fa-plus-circle"></i>
+      {{ lang?.skills?.label?.cardNewButton }}
+    </button>
+  </div>
+</section>

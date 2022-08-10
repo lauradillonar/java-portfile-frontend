@@ -372,6 +372,17 @@
                     },
         "skills":{
                         "title":"Tecnologías.",
+                        "label": {
+                            "item": "Tecnología",
+                            "progress": "Nivel de progreso",
+                            "createButton": "Guardar",
+                            "cancelButton": "Volver",
+                            "editButton": "Actualizar",
+                            "deleteButton": "Borrar",
+                            "cardEditButton": "Editar",
+                            "cardDeleteButton": "Borrar",
+                            "cardNewButton": "Nueva tecnología"
+                        },
                         "bars":[
                             {
                                 "id": 1,

@@ -1,6 +1,7 @@
 <section id="education" class="education py-5">
   <div class="container py-5">
     <h1 class="text-center py-5">{{ lang?.education?.title }}</h1>
+    <div class="preloader" *ngIf="!hasEducation"></div>
     <div *ngIf="hasEducation">
       <div class="row pb-3">
         <div class="col-lg-4 my-3" *ngFor="let item of educations; index as i">

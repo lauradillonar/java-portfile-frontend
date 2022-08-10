@@ -1,21 +1,21 @@
-import Swal from 'sweetalert2';
 import { PortfileService } from './../../../services/portfile.service';
-import { EducationService } from './../../../services/education.service';
+import { SkillService } from './../../../services/skill.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Education } from './../../../models/education';
+import { Skill } from './../../../models/skill';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-edit-education',
-  templateUrl: './edit-education.component.html',
-  styleUrls: ['./edit-education.component.css']
+  selector: 'app-edit-skill',
+  templateUrl: './edit-skill.component.html',
+  styleUrls: ['./edit-skill.component.css']
 })
-export class EditEducationComponent implements OnInit {
+export class EditSkillComponent implements OnInit {
 
-  education!: Education;
+  skill!: Skill;
   idPerson?: number;
-  idEducation?: number;
-  hasEducation: boolean = false;
+  idSkill?: number;
+  hasSkill: boolean = false;
 
   myPortfile: any;
   lang: any;
@@ -24,7 +24,7 @@ export class EditEducationComponent implements OnInit {
   constructor(
     private activateRoute: ActivatedRoute,
     private router: Router,
-    private educationService: EducationService,
+    private skillService: SkillService,
     private labels: PortfileService
   ) { }
 
@@ -33,48 +33,48 @@ export class EditEducationComponent implements OnInit {
       data => {
         this.myPortfile = data;
         this.lang = this.myPortfile.es;
-        this.label = this.lang.education.label;
-      }, 
+        this.label = this.lang.skills.label;
+      },
       err => {
         console.log(err);
       }
     );
 
-    this.idEducation = this.activateRoute.snapshot.params['idEducation'];
+    this.idSkill = this.activateRoute.snapshot.params['idSkill'];
     this.idPerson = this.activateRoute.snapshot.params['idPerson'];
 
-    if (this.idEducation){
-      this.educationService.getOne(this.idEducation).subscribe(
+    if (this.idSkill){
+      this.skillService.getOne(this.idSkill).subscribe(
         data => {
           if(data.idPerson != this.idPerson){
             Swal.fire("Ops...", "No autorizado", "error");
             this.router.navigate(['/']);
           } else {
-            this.education = data;
-            this.hasEducation = true;
+            this.skill = data;
+            this.hasSkill = true;
           }
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'education'});
+          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'skills'});
         }
       );
     }
   }
 
   onUpdate(): void {
-    if(this.education.idEducation && this.idPerson){
-      this.educationService.update(this.education.idEducation, this.education, this.idPerson).subscribe(
+    if(this.skill.idSkill && this.idPerson){
+      this.skillService.update(this.skill.idSkill, this.skill, this.idPerson).subscribe(
         data => {
           Swal.fire("Datos Actualizados", "Listo", "success");
-          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'education'});
+          this.router.navigate([`${this.idPerson}/home`], {fragment: 'skills'});
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'education'});
+          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'skills'});
         }
       );
-    }
+    }   
   }
 
 }

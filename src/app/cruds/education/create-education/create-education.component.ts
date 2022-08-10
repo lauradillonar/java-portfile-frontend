@@ -41,6 +41,9 @@ export class CreateEducationComponent implements OnInit {
         this.myPortfile = data;
         this.lang = this.myPortfile.es;
         this.label = this.lang.education.label;
+      },
+      err => {
+        console.log(err);
       }
     );
   }

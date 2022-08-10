@@ -1,3 +1,5 @@
+import { SkillComponent } from './components/skill/skill.component';
+import { EditSkillComponent } from './cruds/skill/edit-skill/edit-skill.component';
 import { EducationComponent } from './components/education/education.component';
 import { EditEducationComponent } from './cruds/education/edit-education/edit-education.component';
 import { CreateEducationComponent } from './cruds/education/create-education/create-education.component';
@@ -11,6 +13,7 @@ import { ListPersonComponent } from './person/list-person/list-person.component'
 import { CreateExperienceComponent } from './cruds/experience/create-experience/create-experience.component';
 import { EditExperienceComponent } from './cruds/experience/edit-experience/edit-experience.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { CreateSkillComponent } from './cruds/skill/create-skill/create-skill.component';
 
 const routes: Routes = [
   {
@@ -52,6 +55,18 @@ const routes: Routes = [
   {
     path: ':idPerson/educations',
     component: EducationComponent
+  },
+  {
+    path: ':idPerson/skill/create',
+    component: CreateSkillComponent
+  },
+  {
+    path: ':idPerson/skill/edit/:idSkill',
+    component: EditSkillComponent
+  },
+  {
+    path: ':idPerson/skills',
+    component: SkillComponent
   },
   {
     path: '**',

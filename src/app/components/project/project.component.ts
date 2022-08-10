@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { PortfileService } from 'src/app/services/portfile.service';
 
 @Component({
-  selector: 'app-projects',
-  templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  selector: 'app-project',
+  templateUrl: './project.component.html',
+  styleUrls: ['./project.component.css']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectComponent implements OnInit {
 
   constructor(private data: PortfileService) { }
 
