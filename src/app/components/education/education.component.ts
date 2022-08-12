@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Education } from './../../models/education';
 import { EducationService } from './../../services/education.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { PortfileService } from 'src/app/services/portfile.service';
 import Swal from 'sweetalert2';
 
@@ -15,7 +15,8 @@ export class EducationComponent implements OnInit {
   constructor(
     private data: PortfileService,
     private educationService: EducationService,
-    private router: Router) { }
+    private router: Router,
+    private elementRef: ElementRef) { }
 
   myPortfile:any;
   lang: any;
@@ -23,6 +24,8 @@ export class EducationComponent implements OnInit {
   @Input() idPerson?: number;
   educations: Education[] = [];
   hasEducation: boolean = false;
+  textareas!: NodeList;
+  
 
   ngOnInit(): void {
     this.data.getData().subscribe(data =>{
@@ -35,6 +38,17 @@ export class EducationComponent implements OnInit {
     });
 
     this.listEducation();
+  }
+
+  ngAfterViewCheked(): void {
+    this.textareas = document.querySelectorAll(".text");
+    this.textareas.forEach(
+      (text:any) => {
+        
+        text.style.height =text.scrollHeight+'px';
+        console.log(text.style.height);
+    });
+    
   }
 
   listEducation(): void{
@@ -67,3 +81,6 @@ export class EducationComponent implements OnInit {
     }
   }
 }
+
+
+

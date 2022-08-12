@@ -26,7 +26,6 @@
     height: 100%;
     border:none;
     outline: none;
-
     position: relative;
 
     -webkit-box-shadow: -20px 24px 89px -46px rgba(0,0,0,0.59);
@@ -53,22 +52,14 @@
 
 }
 
-ul{
-    list-style-type: square;
-    color: gray;
-}
-
 .viewmore{
-    position: absolute;
-    bottom: 3rem;
+    border: none;
+    outline: none;
     text-decoration:none;
 }
 
 .deletebutton{
     background-color: transparent;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
     cursor: pointer;
     border: none;
     outline: none;
@@ -77,9 +68,6 @@ ul{
 
 .editbutton{
     background-color: transparent;
-    position: absolute;
-    bottom: 1rem;
-    right: 6rem;
     cursor:pointer;
     border: none;
     outline: none;
@@ -89,10 +77,31 @@ ul{
 .createbutton{
     background-color: transparent;
     cursor: pointer;
-    margin: 2rem 2rem 2rem 2rem;
+    margin: 1rem;
     border: none;
     outline: none;
     color: #616161;
 
+}
+
+.text{
+    display: block;
+    border: none;
+    outline: none;
+    padding-top: 2rem;
+    color: #775f3e;
+    height: auto;
+    resize: none;
+}
+
+div.h6{
+    color: #616161;
+    height: auto;
+}
+
+div.h4{
+    color: #616161;
+    height: auto;
+    padding-top: 2rem;
 }
 

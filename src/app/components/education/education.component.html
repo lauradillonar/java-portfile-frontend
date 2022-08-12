@@ -11,49 +11,75 @@
             data-aos-duration="2000"
             *ngIf="i % 3 === 0 || i % 3 === 2"
           >
-            <div class="title-ed py-5 px-5">
-              <h4 class="fw-bold" [innerHTML]="item.title"></h4>
-              <h6 class="fw-bold" [innerHTML]="item.when"></h6>
-              <p class="pt-3" [innerHTML]="item?.subtitle"></p>
-              <p *ngIf="item.text1 != ''" [innerHTML]="item.text1"></p>
-              <p *ngIf="item.link != ''">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div class="d-flex flex-column align-items-start p-4">
+                <div class="w-100 flex-grow-1 flex-shrink-0">
+                  <div
+                    class="h4 text-start fw-bold"
+                    [innerHTML]="item.title"
+                  ></div>
+                </div>
+
+                <div class="w-100 flex-grow-1 flex-shrink-0">
+                  <div
+                    class="h6 text-start fw-bold"
+                    [innerHTML]="item.when"
+                  ></div>
+                </div>
+                <div class="w-100 flex-grow-1 flex-shrink-0">
+                  <div class="text-start" [innerHTML]="item?.subtitle"></div>
+                </div>
+                <textarea
+                  *ngIf="item.text1 != ''"
+                  class="text text-start w-100 flex-grow-1 flex-shrink-0"
+                  [value]="item?.text1"
+                  readonly
+                ></textarea>
                 <a
+                  *ngIf="item.link != ''"
+                  class="align-self-center"
                   href="{{ item.url }}"
                   target="_blank"
                   rel="noopener noreferrer"
                   >{{ item?.link }}</a
                 >
-              </p>
-              <p *ngIf="item.text2 != ''" [innerHTML]="item.text2"></p>
-              <p *ngIf="item.viewmore != ''">
+                <textarea
+                  *ngIf="item.text2 != ''"
+                  class="html w-100 text-start flex-grow-1 flex-shrink-0"
+                  [value]="item.text2"
+                  readonly
+                ></textarea>
+              </div>
+              <div class="d-flex flex-row mt-3 justify-content-evenly">
                 <a
+                  *ngIf="item.viewmore != ''"
                   class="viewmore"
                   href="{{ item.viewmore }}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><br />
+                >
                   <i class="far fa-eye"></i>
                   {{ lang?.education?.label?.cardViewmoreButton }}</a
                 >
-              </p>
-              <button
-                type="button"
-                class="editbutton"
-                routerLink="/{{ idPerson }}/education/edit/{{
-                  item.idEducation
-                }}"
-              >
-                <i class="far fa-edit"></i>
-                {{ lang?.education?.label?.cardEditButton }}
-              </button>
-              <button
-                type="button"
-                class="deletebutton"
-                (click)="deleteEducation(item.idEducation)"
-              >
-                <i class="far fa-trash-alt"></i>
-                {{ lang?.education?.label?.cardDeleteButton }}
-              </button>
+                <button
+                  type="button"
+                  class="editbutton"
+                  routerLink="/{{ idPerson }}/education/edit/{{
+                    item.idEducation
+                  }}"
+                >
+                  <i class="far fa-edit"></i>
+                  {{ lang?.education?.label?.cardEditButton }}
+                </button>
+                <button
+                  type="button"
+                  class="deletebutton"
+                  (click)="deleteEducation(item.idEducation)"
+                >
+                  <i class="far fa-trash-alt"></i>
+                  {{ lang?.education?.label?.cardDeleteButton }}
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -62,49 +88,76 @@
             data-aos-duration="2000"
             *ngIf="i % 3 === 1"
           >
-            <div class="title-ed py-5 px-5">
-              <h4 class="fw-bold" [innerHTML]="item.title"></h4>
-              <h6 class="fw-bold" [innerHTML]="item.when"></h6>
-              <p class="pt-3" [innerHTML]="item?.subtitle"></p>
-              <p *ngIf="item.text1 != ''" [innerHTML]="item.text1"></p>
-              <p *ngIf="item.link != ''">
+            <div class="card-body d-flex flex-column justify-content-between">
+              <div class="d-flex flex-column h-100 align-items-start p-4">
+                <div class="w-100 flex-grow-1 flex-shrink-0">
+                  <div
+                    class="h4 text-start fw-bold"
+                    [innerHTML]="item.title"
+                  ></div>
+                </div>
+
+                <div class="w-100 flex-grow-1 flex-shrink-0">
+                  <div
+                    class="h6 text-start fw-bold"
+                    [innerHTML]="item.when"
+                  ></div>
+                </div>
+                <div class="w-100 flex-grow-1 flex-shrink-0">
+                  <div class="text-start" [innerHTML]="item?.subtitle"></div>
+                </div>
+
+                <textarea
+                  *ngIf="item.text1 != ''"
+                  class="html text-start w-100 flex-grow-1 flex-shrink-0"
+                  [value]="item?.text1"
+                  readonly
+                ></textarea>
                 <a
+                  *ngIf="item.link != ''"
+                  class="align-self-center"
                   href="{{ item.url }}"
                   target="_blank"
                   rel="noopener noreferrer"
                   >{{ item?.link }}</a
                 >
-              </p>
-              <p *ngIf="item.text2 != ''" [innerHTML]="item.text2"></p>
-              <p *ngIf="item.viewmore != ''">
+                <textarea
+                  *ngIf="item.text2 != ''"
+                  class="html w-100 text-start flex-grow-1 flex-shrink-0"
+                  [value]="item.text2"
+                  readonly
+                ></textarea>
+              </div>
+              <div class="d-flex flex-row mt-3 justify-content-evenly">
                 <a
+                  *ngIf="item.viewmore != ''"
                   class="viewmore"
                   href="{{ item.viewmore }}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><br />
+                >
                   <i class="far fa-eye"></i>
                   {{ lang?.education?.label?.cardViewmoreButton }}</a
                 >
-              </p>
-              <button
-                type="button"
-                class="editbutton"
-                routerLink="/{{ idPerson }}/education/edit/{{
-                  item.idEducation
-                }}"
-              >
-                <i class="far fa-edit"></i>
-                {{ lang?.education?.label?.cardEditButton }}
-              </button>
-              <button
-                type="button"
-                class="deletebutton"
-                (click)="deleteEducation(item.idEducation)"
-              >
-                <i class="far fa-trash-alt"></i>
-                {{ lang?.education?.label?.cardDeleteButton }}
-              </button>
+                <button
+                  type="button"
+                  class="editbutton"
+                  routerLink="/{{ idPerson }}/education/edit/{{
+                    item.idEducation
+                  }}"
+                >
+                  <i class="far fa-edit"></i>
+                  {{ lang?.education?.label?.cardEditButton }}
+                </button>
+                <button
+                  type="button"
+                  class="deletebutton"
+                  (click)="deleteEducation(item.idEducation)"
+                >
+                  <i class="far fa-trash-alt"></i>
+                  {{ lang?.education?.label?.cardDeleteButton }}
+                </button>
+              </div>
             </div>
           </div>
         </div>
