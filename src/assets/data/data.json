@@ -418,6 +418,21 @@
             },
         "projects": { 
                     "title": "Proyectos.",
+                    "label": {
+                        "title": "Nombre del proyecto",
+                        "fontawesome": "Un símbolo (opcional) de",
+                        "letter": "Una letra (opcional)",
+                        "text": "Descripción breve (opcional)",
+                        "viewmore": "Enlace a sitio web donde ver más (opcional)",
+                        "createButton": "Guardar",
+                        "cancelButton": "Volver",
+                        "editButton": "Actualizar",
+                        "deleteButton": "Borrar",
+                        "cardEditButton": "Editar",
+                        "cardDeleteButton": "Borrar",
+                        "cardNewButton": "Nuevo proyecto",
+                        "cardViewmoreButton": "Ver más"
+                    },
                     "cards":[
                         {
                             "id": 1,

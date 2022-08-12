@@ -31,6 +31,8 @@ import { CreateEducationComponent } from './cruds/education/create-education/cre
 import { EditEducationComponent } from './cruds/education/edit-education/edit-education.component';
 import { CreateSkillComponent } from './cruds/skill/create-skill/create-skill.component';
 import { EditSkillComponent } from './cruds/skill/edit-skill/edit-skill.component';
+import { CreateProjectComponent } from './cruds/project/create-project/create-project.component';
+import { EditProjectComponent } from './cruds/project/edit-project/edit-project.component';
 
 
 @NgModule({
@@ -55,7 +57,9 @@ import { EditSkillComponent } from './cruds/skill/edit-skill/edit-skill.componen
     CreateEducationComponent,
     EditEducationComponent,
     CreateSkillComponent,
-    EditSkillComponent
+    EditSkillComponent,
+    CreateProjectComponent,
+    EditProjectComponent
   ],
   imports: [
     BrowserModule,

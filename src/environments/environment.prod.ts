@@ -4,6 +4,7 @@ export const environment = {
   experienceURL: 'https://lauradillon.herokuapp.com/portfile/api/experiences/',
   educationURL: 'https://lauradillon.herokuapp.com/portfile/api/educations/',
   skillURL: 'https://lauradillon.herokuapp.com/portfile/api/skills/',
+  projectURL: 'https://lauradillon.herokuapp.com/portfile/api/projects/',
   firebaseConfig : {
     apiKey: "AIzaSyChMYnOt8YA_Q9AzK_JjzqCwSHb89KcMRk",
     authDomain: "lvd-portfile.firebaseapp.com",

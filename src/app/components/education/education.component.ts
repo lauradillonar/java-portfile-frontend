@@ -29,6 +29,9 @@ export class EducationComponent implements OnInit {
       this.myPortfile=data;
       this.lang=this.myPortfile.es;
       this.items= this.lang.education.cards;
+    },
+    err => {
+      console.log(err);
     });
 
     this.listEducation();

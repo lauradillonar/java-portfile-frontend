@@ -1,0 +1,137 @@
+<app-navbar [idPerson]="idPerson"></app-navbar>
+<div class="initial"></div>
+<div class="container">
+  <h1 class="text-center py-5">{{ lang?.projects?.tile }}</h1>
+  <div class="preloader" *ngIf="!hasProject"></div>
+  <div *ngIf="hasProject">
+    <div class="row my-5">
+      <div class="col-md-8 mx-auto">
+        <div class="card my-3 py-5 px-5">
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="form-group mb-3">
+              <label for="title">{{ label?.title }}</label>
+              <input
+                autofocus
+                type="text"
+                class="form-control"
+                id="title"
+                name="title"
+                [(ngModel)]="project.title"
+                required
+              />
+            </div>
+            <div class="form-group mb-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="fontawesomeRadio"
+                  (click)="
+                    (lradio.disabled = true) &&
+                      (faradio.disabled = false) &&
+                      radio1.setAttribute('checked', 'true') &&
+                      radio2.setAttribute('checked', 'false')
+                  "
+                  #radio1
+                />
+
+                <label class="form-check-label" for="fontawesomeRadio">
+                  {{ label?.fontawesome }}
+                  <a
+                    href="https://fontawesome.com/v5/search?m=free"
+                    target="_blank"
+                    >fontawesome.com</a
+                  >
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fontawesome"
+                  name="fontawesome"
+                  [(ngModel)]="project.fontawesome"
+                  (click)="
+                    (lradio.disabled = true) &&
+                      (faradio.disabled = false) &&
+                      radio1.setAttribute('checked', 'true') &&
+                      radio2.setAttribute('checked', 'false')
+                  "
+                  #faradio
+                />
+              </div>
+            </div>
+            <div class="form-group mb-3">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="flexRadioDefault"
+                  id="letterRadio"
+                  (click)="
+                    (faradio.disabled = true) &&
+                      (lradio.disabled = false) &&
+                      radio1.setAttribute('checked', 'false') &&
+                      radio2.setAttribute('checked', 'true')
+                  "
+                  #radio2
+                />
+                <label class="form-check-label" for="letterRadio">
+                  {{ label?.letter }}
+                </label>
+
+                <input
+                  type="text"
+                  class="form-control"
+                  id="letter"
+                  name="letter"
+                  [(ngModel)]="project.letter"
+                  #lradio
+                  disabled
+                  (click)="
+                    (faradio.disabled = true) &&
+                      (lradio.disabled = false) &&
+                      radio1.setAttribute('checked', 'false') &&
+                      radio2.setAttribute('checked', 'true')
+                  "
+                />
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="text">{{ label?.text }}</label>
+              <textarea
+                class="form-control"
+                id="text"
+                name="text"
+                [(ngModel)]="project.text"
+              ></textarea>
+            </div>
+            <div class="form-group mb-3">
+              <label for="viewmore">{{ label?.viewmore }}</label>
+              <input
+                type="text"
+                class="form-control"
+                id="viewmore"
+                name="viewmore"
+                [(ngModel)]="project.viewmore"
+              />
+            </div>
+            <button class="editbutton" type="submit" [disabled]="!f.valid">
+              <i class="fas fa-pencil-alt"></i> {{ label?.editButton }}
+            </button>
+            <button
+              class="cancelbutton"
+              type="button"
+              routerLink="/{{ idPerson }}/home"
+              fragment="projects"
+            >
+              <i class="fas fa-arrow-alt-circle-left"></i>
+              {{ label?.cancelButton }}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

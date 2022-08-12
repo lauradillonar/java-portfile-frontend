@@ -1,3 +1,6 @@
+import { ProjectComponent } from './components/project/project.component';
+import { EditProjectComponent } from './cruds/project/edit-project/edit-project.component';
+import { CreateProjectComponent } from './cruds/project/create-project/create-project.component';
 import { SkillComponent } from './components/skill/skill.component';
 import { EditSkillComponent } from './cruds/skill/edit-skill/edit-skill.component';
 import { EducationComponent } from './components/education/education.component';
@@ -67,6 +70,18 @@ const routes: Routes = [
   {
     path: ':idPerson/skills',
     component: SkillComponent
+  },
+  {
+    path: ':idPerson/project/create',
+    component: CreateProjectComponent
+  },
+  {
+    path: ':idPerson/project/edit/:idProject',
+    component: EditProjectComponent
+  },
+  {
+    path: ':idPerson/projects',
+    component: ProjectComponent
   },
   {
     path: '**',
