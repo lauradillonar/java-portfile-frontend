@@ -43,13 +43,12 @@
           </div>
           <div class="form-group mb-3">
             <label for="text1">{{ label?.text1 }}</label>
-            <input
-              type="text"
+            <textarea
               class="form-control"
               id="text1"
               name="text1"
               [(ngModel)]="text1"
-            />
+            ></textarea>
           </div>
           <div class="form-group mb-3">
             <label for="link">{{ label?.link }}</label>
@@ -73,13 +72,12 @@
           </div>
           <div class="form-group mb-3">
             <label for="text2">{{ label?.text2 }}</label>
-            <input
-              type="text"
+            <textarea
               class="form-control"
               id="text2"
               name="text2"
               [(ngModel)]="text2"
-            />
+            ></textarea>
           </div>
           <div class="form-group mb-3">
             <label for="viewmore">{{ label?.viewmore }}</label>
@@ -91,18 +89,20 @@
               [(ngModel)]="viewmore"
             />
           </div>
-          <button class="createbutton" type="submit" [disabled]="!f.valid">
-            <i class="fas fa-plus-circle"></i> {{ label?.createButton }}
-          </button>
-          <button
-            class="cancelbutton"
-            type="button"
-            routerLink="/{{ idPerson }}/home"
-            fragment="education"
-          >
-            <i class="fas fa-arrow-alt-circle-left"></i>
-            {{ label?.cancelButton }}
-          </button>
+          <div class="d-flex flex-row mt-3 justify-content-evenly">
+            <button class="createbutton" type="submit" [disabled]="!f.valid">
+              <i class="fas fa-plus-circle"></i> {{ label?.createButton }}
+            </button>
+            <button
+              class="cancelbutton"
+              type="button"
+              routerLink="/{{ idPerson }}/home"
+              fragment="education"
+            >
+              <i class="fas fa-arrow-alt-circle-left"></i>
+              {{ label?.cancelButton }}
+            </button>
+          </div>
         </form>
       </div>
     </div>

@@ -23,6 +23,7 @@ export class ProjectComponent implements OnInit {
   @Input() idPerson?: number;
   projects: Project[] = [];
   hasProject: boolean = false;
+  textareas!: NodeList;
   
 
   ngOnInit(): void {
@@ -36,6 +37,14 @@ export class ProjectComponent implements OnInit {
     });
 
     this.listProject();
+  }
+
+  ngAfterViewChecked(): void {
+    this.textareas = document.querySelectorAll(".text");
+    this.textareas.forEach(
+      (text:any) => {
+        text.style.height =text.scrollHeight+'px';
+    });
   }
 
   listProject(): void{

@@ -41,18 +41,20 @@
                 <option value="100" selected>100</option>
               </select>
             </div>
-            <button class="editbutton" type="submit" [disabled]="!f.valid">
-              <i class="fas fa-pencil-alt"></i> {{ label?.editButton }}
-            </button>
-            <button
-              class="cancelbutton"
-              type="button"
-              routerLink="/{{ idPerson }}/home"
-              fragment="experience"
-            >
-              <i class="fas fa-arrow-alt-circle-left"></i>
-              {{ label?.cancelButton }}
-            </button>
+            <div class="d-flex flex-row mt-3 justify-content-evenly">
+              <button class="editbutton" type="submit" [disabled]="!f.valid">
+                <i class="fas fa-pencil-alt"></i> {{ label?.editButton }}
+              </button>
+              <button
+                class="cancelbutton"
+                type="button"
+                routerLink="/{{ idPerson }}/home"
+                fragment="experience"
+              >
+                <i class="fas fa-arrow-alt-circle-left"></i>
+                {{ label?.cancelButton }}
+              </button>
+            </div>
           </form>
         </div>
       </div>

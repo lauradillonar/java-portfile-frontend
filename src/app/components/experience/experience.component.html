@@ -20,7 +20,12 @@
             <div class="col-lg-8 py-5 px-5">
               <p>{{ item.when }}<br />{{ item.where }}</p>
               <p>
-                <span [innerHTML]="item.text"></span>
+                <textarea
+                  *ngIf="item.text != ''"
+                  class="text text-start w-100 flex-grow-1 flex-shrink-0"
+                  [value]="item?.text"
+                  readonly
+                ></textarea>
                 <a
                   *ngIf="item.link1 != ''"
                   href="{{ item.url1 }}"
@@ -81,7 +86,12 @@
             <div class="col-lg-8 py-5 px-5">
               <p>{{ item.when }}<br />{{ item.where }}</p>
               <p>
-                <span [innerHTML]="item.text"></span>
+                <textarea
+                  *ngIf="item.text != ''"
+                  class="text text-start w-100 flex-grow-1 flex-shrink-0"
+                  [value]="item?.text"
+                  readonly
+                ></textarea>
                 <a
                   *ngIf="item.link1 != ''"
                   href="{{ item.url1 }}"

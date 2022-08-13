@@ -97,3 +97,13 @@ a:hover {
 
 }
 
+.text{
+    display: block;
+    border: none;
+    outline: none;
+    padding-top: 2rem;
+    color: #775f3e;
+    height: auto;
+    resize: none;
+}
+

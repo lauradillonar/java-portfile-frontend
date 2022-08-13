@@ -106,16 +106,13 @@
 
 }
 
-
-textarea {
+.text {
+    display: block;
     border: none;
     outline: none;
-    width: 100%;
-    height: 100%;
     padding: 1rem;
     color: #775f3e;
-    overflow-y:auto;  
+    height: auto;
     resize: none;
-    text-align: center;
 }
 

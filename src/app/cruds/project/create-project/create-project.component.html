@@ -116,18 +116,20 @@
               [(ngModel)]="viewmore"
             />
           </div>
-          <button class="createbutton" type="submit" [disabled]="!f.valid">
-            <i class="fas fa-plus-circle"></i> {{ label?.createButton }}
-          </button>
-          <button
-            class="cancelbutton"
-            type="button"
-            routerLink="/{{ idPerson }}/home"
-            fragment="projects"
-          >
-            <i class="fas fa-arrow-alt-circle-left"></i>
-            {{ label?.cancelButton }}
-          </button>
+          <div class="d-flex flex-row mt-3 justify-content-evenly">
+            <button class="createbutton" type="submit" [disabled]="!f.valid">
+              <i class="fas fa-plus-circle"></i> {{ label?.createButton }}
+            </button>
+            <button
+              class="cancelbutton"
+              type="button"
+              routerLink="/{{ idPerson }}/home"
+              fragment="projects"
+            >
+              <i class="fas fa-arrow-alt-circle-left"></i>
+              {{ label?.cancelButton }}
+            </button>
+          </div>
         </form>
       </div>
     </div>

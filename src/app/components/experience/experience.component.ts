@@ -23,6 +23,7 @@ export class ExperienceComponent implements OnInit {
   @Input() idPerson?: number;
   experiences: Experience[] = [];
   hasExperience: boolean = false;
+  textareas!: NodeList;
 
   ngOnInit(): void {
     
@@ -32,6 +33,14 @@ export class ExperienceComponent implements OnInit {
       this.items= this.lang.experience.cards;
     });
     this.listExperience();
+  }
+
+  ngAfterViewChecked(): void {
+    this.textareas = document.querySelectorAll(".text");
+    this.textareas.forEach(
+      (text:any) => {
+        text.style.height =text.scrollHeight+'px';
+    });
   }
 
   listExperience(): void{
