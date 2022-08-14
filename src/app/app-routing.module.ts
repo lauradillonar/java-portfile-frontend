@@ -1,3 +1,5 @@
+import { ListContactComponent } from './cruds/contact/list-contact/list-contact.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { ProjectComponent } from './components/project/project.component';
 import { EditProjectComponent } from './cruds/project/edit-project/edit-project.component';
 import { CreateProjectComponent } from './cruds/project/create-project/create-project.component';
@@ -82,6 +84,14 @@ const routes: Routes = [
   {
     path: ':idPerson/projects',
     component: ProjectComponent
+  },
+  {
+    path: ':idPerson/contact/list',
+    component: ListContactComponent
+  },
+  {
+    path: ':idPerson/contact',
+    component: ContactComponent
   },
   {
     path: '**',

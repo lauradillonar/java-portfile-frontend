@@ -1,29 +1,31 @@
 <section id="contact" class="contact py-5 bg-light">
   <div class="container py-5">
     <h1 class="text-center py-5">{{ lang?.contact?.title }}</h1>
-    <div class="row pb-3">
-      <div class="col-md-10 mx-auto">
-        <div class="row text-center">
-          <div class="col-md-4">
-            <div class="circle">
-              <span><i class="fas fa-location-arrow"></i></span>
+    <div *ngIf="hasPerson">
+      <div class="row pb-3">
+        <div class="col-md-10 mx-auto">
+          <div class="row text-center">
+            <div class="col-md-4">
+              <div class="circle">
+                <span><i class="fas fa-location-arrow"></i></span>
+              </div>
+              <h5>{{ label?.locationTitle }}</h5>
+              <p>{{ person?.location }}</p>
             </div>
-            <h5>{{ lang?.contact?.locationTitle }}</h5>
-            <p>{{ lang?.contact?.location }}</p>
-          </div>
-          <div class="col-md-4">
-            <div class="circle">
-              <span><i class="fas fa-envelope"></i></span>
+            <div class="col-md-4">
+              <div class="circle">
+                <span><i class="fas fa-envelope"></i></span>
+              </div>
+              <h5>{{ label?.emailTitle }}</h5>
+              <p>{{ person?.email }}</p>
             </div>
-            <h5>{{ lang?.contact?.emailTitle }}</h5>
-            <p>{{ lang?.contact?.email }}</p>
-          </div>
-          <div class="col-md-4">
-            <div class="circle">
-              <span><i class="fas fa-phone"></i></span>
+            <div class="col-md-4">
+              <div class="circle">
+                <span><i class="fas fa-phone"></i></span>
+              </div>
+              <h5>{{ lang?.phoneTitle }}</h5>
+              <p>{{ person?.phone }}</p>
             </div>
-            <h5>{{ lang?.contact?.phoneTitle }}</h5>
-            <p>{{ lang?.contact?.phone }}</p>
           </div>
         </div>
       </div>
@@ -36,7 +38,7 @@
               <input
                 type="text"
                 class="form-control bg-light mb-3"
-                placeholder="{{ lang?.contact?.textName }}"
+                placeholder="{{ label?.textName }}"
                 formControlName="name"
                 [class]="isValidField('name')"
               />
@@ -51,7 +53,7 @@
               <input
                 type="email"
                 class="form-control bg-light mb-3"
-                placeholder="{{ lang?.contact?.textEmail }}"
+                placeholder="{{ label?.textEmail }}"
                 formControlName="email"
                 [class]="isValidField('email')"
               />
@@ -71,7 +73,7 @@
                 name=""
                 id=""
                 class="form-control bg-light"
-                placeholder="{{ lang?.contact?.textMessage }}"
+                placeholder="{{ label?.textMessage }}"
                 formControlName="message"
                 [class]="isValidField('message')"
                 rows="10"
@@ -93,24 +95,53 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn3 my-4">
-            {{ lang?.contact?.textSubmit }}
+          <button type="submit" class="btn btn3 my-4">
+            {{ label?.cardSubmitButton }}
           </button>
         </form>
       </div>
     </div>
-    <div class="row py-3">
-      <div class="col-md-10 mx-auto">
-        <div class="row text-center">
-          <div class="col-md">
-            <div class="circle mx-1" style="cursor: pointer">
-              <span><i class="fab fa-facebook fa-lg fa-fw"></i></span>
-            </div>
-            <div class="circle mx-1" style="cursor: pointer">
-              <span><i class="fab fa-instagram fa-lg fa-fw"></i></span>
-            </div>
-            <div class="circle mx-1" style="cursor: pointer">
-              <span><i class="fab fa-twitter fa-lg fa-fw"></i></span>
+    <div *ngIf="hasPerson">
+      <div class="row py-3">
+        <div class="col-md-9 mx-auto text-center">
+          <button type="button" class="btn buttonView" (click)="viewMessages()">
+            {{ label?.cardViewMessages }}
+          </button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="hasPerson">
+      <div class="row py-3">
+        <div class="col-md-10 mx-auto">
+          <div class="row text-center">
+            <div class="col-md">
+              <a
+                *ngIf="person?.facebook != ''"
+                href="{{ person?.facebook }}"
+                target="_blank"
+              >
+                <div class="circle mx-1" style="cursor: pointer">
+                  <span><i class="fab fa-facebook fa-lg fa-fw"></i></span>
+                </div>
+              </a>
+              <a
+                *ngIf="person?.instagram != ''"
+                href="{{ person?.instagram }}"
+                target="_blank"
+              >
+                <div class="circle mx-1" style="cursor: pointer">
+                  <span><i class="fab fa-instagram fa-lg fa-fw"></i></span>
+                </div>
+              </a>
+              <a
+                *ngIf="person?.twitter != ''"
+                href="{{ person?.twitter }}"
+                target="_blank"
+              >
+                <div class="circle mx-1" style="cursor: pointer">
+                  <span><i class="fab fa-twitter fa-lg fa-fw"></i></span>
+                </div>
+              </a>
             </div>
           </div>
         </div>

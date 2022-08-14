@@ -672,6 +672,18 @@
                 },
         "contact": {
                         "title": "Contacto.",
+                        "label": {
+                            "locationTitle": "Lugar",
+                            "emailTitle": "Email",
+                            "phoneTitle": "Teléfono",
+                            "textName": "Nombre",
+                            "textEmail": "Email",
+                            "textMessage": "Mensaje",
+                            "cancelButton": "Volver",
+                            "cardSubmitButton": "Enviar", 
+                            "cardViewMessages": "Ver mensajes recibidos",
+                            "cardDeleteButton": "Borrar"                        
+                        },
                         "locationTitle": "Lugar",
                         "location": "Salta, Argentina",
                         "emailTitle": "Email",
