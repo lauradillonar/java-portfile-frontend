@@ -363,6 +363,9 @@
         },
         "about":{
                         "title":"Acerca de mí.",
+                        "label": {
+                            "cardEditButton": "Editar"
+                        },
                         "subtitle": "En constante búsqueda de herramientas tecnológicas que permitan aumentar la calidad de vida.",
                         "text":"Desde que tenía siete años, me ha sorprendido lo que se puede lograr al escribir código en una computadora. Sigo aprendiendo sobre las nuevas tecnologías de la información que, sumadas a la creatividad, se convierten en herramientas para resolver problemas cotidianos.<br /><br />Si necesita un sitio web simple, comercial o una aplicación móvil, no hay problema, mi trabajo es hacer que su marca se destaque, escuchando con atención para entender sus necesidades.<br /><br />Por favor, no dude en contactarme.",
                         "image":{

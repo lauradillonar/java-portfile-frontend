@@ -13,6 +13,7 @@ export class EditPersonComponent implements OnInit {
 
   person!: Person;
   hasPersons: boolean = false;
+  idPerson?: number;
 
   constructor(
     private personService: PersonService,
@@ -21,31 +22,40 @@ export class EditPersonComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const idPerson = this.activateRoute.snapshot.params['idPerson'];
-    this.personService.home(idPerson).subscribe(
-      data => {
-        this.person = data;
-        this.hasPersons = true;
-      },
-      err => {
-        Swal.fire("Ops...",err.error.message, "error");
-        this.router.navigate(['/']);
-      }
-    );
+    this.idPerson = this.activateRoute.snapshot.params['idPerson'];
+
+    if(this.idPerson){
+      this.personService.home(this.idPerson).subscribe(
+        data => {
+          this.person = data;
+          this.hasPersons = true;
+        },
+        err => {
+          Swal.fire("Ops...",err.error.message, "error");
+          this.router.navigate(['/']);
+        }
+      );
+    }else{
+      Swal.fire("Ops...", "Error", "error");
+      this.router.navigate(['/']);
+    }
   }
 
   onUpdate(): void{
-    const idPerson = this.activateRoute.snapshot.params['idPerson'];
-    this.personService.update(idPerson, this.person).subscribe(
-      data => {
-        Swal.fire("Datos Actualizados", "Listo", "success");
-        this.router.navigate(['/']);
-      },
-      err => {
-        Swal.fire("Ops...", err.error.message, "error");
-        this.router.navigate(['/']);
-      }
-    );
+    if(this.idPerson){
+      this.personService.update(this.idPerson, this.person).subscribe(
+        data => {
+          Swal.fire("Datos Actualizados", "Listo", "success");
+          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'main'});
+        },
+        err => {
+          Swal.fire("Ops...", err.error.message, "error");
+          this.router.navigate(['/']);
+        }
+      );
+    }else{
+      Swal.fire("Ops...", "Error", "error");
+      this.router.navigate(['/']);
+    }
   }
-
 }

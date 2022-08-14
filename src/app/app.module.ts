@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { HelloComponent } from './components/hello/hello.component';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import { ProjectComponent } from './components/project/project.component';
 import { ExperienceComponent } from './components/experience/experience.component';
@@ -40,7 +39,6 @@ import { ListContactComponent } from './cruds/contact/list-contact/list-contact.
   declarations: [
     AppComponent,
     NavbarComponent,
-    HelloComponent,
     AboutmeComponent,
     ProjectComponent,
     ExperienceComponent,

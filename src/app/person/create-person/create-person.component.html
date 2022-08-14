@@ -1,3 +1,4 @@
+<app-navbar></app-navbar>
 <div class="initial"></div>
 <div class="container">
   <div class="row mt-5">
@@ -6,6 +7,7 @@
         <div class="form-group">
           <label for="name">Nombre </label>
           <input
+            autofocus
             type="text"
             class="form-control"
             id="name"
@@ -215,7 +217,19 @@
             [(ngModel)]="twitter"
           />
         </div>
-        <button class="createbutton" [disabled]="!f.valid">Guardar</button>
+        <div class="d-flex flex-row mt-3 justify-content-evenly">
+          <button type="submit" class="createbutton" [disabled]="!f.valid">
+            <i class="fas fa-plus-circle"></i> Guardar
+          </button>
+          <button
+            class="cancelbutton"
+            type="button"
+            routerLink="/{{ idPerson }}/home"
+            fragment="main"
+          >
+            <i class="fas fa-arrow-alt-circle-left"></i> Cancelar
+          </button>
+        </div>
       </form>
     </div>
   </div>

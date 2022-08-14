@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class CreatePersonComponent implements OnInit {
 
+  idPerson?: number;
   name: string = '';
   lastname: string = '';
   userName: string = '';
@@ -66,8 +67,14 @@ export class CreatePersonComponent implements OnInit {
 
     this.personService.save(person).subscribe(
       data => {
-        Swal.fire("Persona Creada", "Listo", "success");
-        this.router.navigate(['/']);
+        this.idPerson = data;
+          if (this.idPerson) {
+          Swal.fire("Persona Creada", "Listo", "success");
+          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'main'});
+        } else {
+          Swal.fire("Ops...", "No guardado", "error");
+          this.router.navigate(['/']);
+        }
       },
       err => {
         Swal.fire("Ops...", err.error.message, "error");

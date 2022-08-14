@@ -12,7 +12,8 @@
     border-radius: 4px;
     font-size: 1rem;
     font-weight: 700;
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .createbutton:hover {
@@ -24,4 +25,26 @@
 
 input{
     margin-bottom: 1rem;
+}
+
+.cancelbutton{
+    background-color: #616161;
+    color: white; 
+    border: none;
+    outline: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+.cancelbutton:hover {
+    background-color: transparent;
+    color: #616161;
+    transition: 0.5;
+    border: 1px solid #616161;
 }
