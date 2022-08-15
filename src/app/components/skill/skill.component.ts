@@ -56,7 +56,7 @@ export class SkillComponent implements OnInit {
         data => {
           Swal.fire("Tecnología borrada", "Listo", "success");
           this.listSkill();
-          this.router.navigate([`/${this.idPerson}/home`],{fragment:'skills'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");

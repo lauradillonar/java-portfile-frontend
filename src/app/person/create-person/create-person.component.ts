@@ -70,7 +70,7 @@ export class CreatePersonComponent implements OnInit {
         this.idPerson = data;
           if (this.idPerson) {
           Swal.fire("Persona Creada", "Listo", "success");
-          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'main'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         } else {
           Swal.fire("Ops...", "No guardado", "error");
           this.router.navigate(['/']);

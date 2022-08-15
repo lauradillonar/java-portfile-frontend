@@ -67,7 +67,7 @@ export class ProjectComponent implements OnInit {
         data => {
           Swal.fire("Proyecto borrado", "Listo", "success");
           this.listProject();
-          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'projects'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         },
         err => {
            Swal.fire("Ops...", err.error.message, "error");

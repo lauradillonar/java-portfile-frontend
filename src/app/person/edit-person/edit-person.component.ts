@@ -46,7 +46,7 @@ export class EditPersonComponent implements OnInit {
       this.personService.update(this.idPerson, this.person).subscribe(
         data => {
           Swal.fire("Datos Actualizados", "Listo", "success");
-          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'main'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");

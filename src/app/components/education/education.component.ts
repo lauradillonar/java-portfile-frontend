@@ -68,7 +68,7 @@ export class EducationComponent implements OnInit {
         data => {
           Swal.fire("Datos de educación borrados", "Listo", "success");
           this.listEducation();
-          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'education'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");

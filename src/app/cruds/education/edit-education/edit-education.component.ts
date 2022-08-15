@@ -56,7 +56,7 @@ export class EditEducationComponent implements OnInit {
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'education'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         }
       );
     }
@@ -67,11 +67,11 @@ export class EditEducationComponent implements OnInit {
       this.educationService.update(this.education.idEducation, this.education, this.idPerson).subscribe(
         data => {
           Swal.fire("Datos Actualizados", "Listo", "success");
-          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'education'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`], {fragment: 'education'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         }
       );
     }

@@ -65,7 +65,7 @@ export class ExperienceComponent implements OnInit {
         data => {
           Swal.fire("Experiencia borrada", "Listo", "success");
           this.listExperience();
-          this.router.navigate([`/${this.idPerson}/home`],{fragment: 'experience'});
+          this.router.navigate([`/${this.idPerson}/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");

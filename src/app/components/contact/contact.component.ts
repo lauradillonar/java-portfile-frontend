@@ -123,7 +123,7 @@ export class ContactComponent implements OnInit {
             },
             err => {
               Swal.fire("Ops...", err.error.message, "error");
-              this.router.navigate([`/${this.idPerson}/home`],{fragment: 'contact'});
+              this.router.navigate([`/${this.idPerson}/home`]);
             }
           );
         }
