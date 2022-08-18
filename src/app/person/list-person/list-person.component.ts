@@ -15,6 +15,7 @@ export class ListPersonComponent implements OnInit {
 
   persons: Person[]= [];
   hasPersons: boolean = false;
+  
  
 
   constructor(
