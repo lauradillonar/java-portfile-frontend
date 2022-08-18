@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Education } from './../../models/education';
 import { EducationService } from './../../services/education.service';
@@ -68,7 +69,7 @@ export class EducationComponent implements OnInit {
         data => {
           Swal.fire("Datos de educación borrados", "Listo", "success");
           this.listEducation();
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");

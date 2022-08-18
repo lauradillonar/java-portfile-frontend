@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Person } from './../../models/person';
 import { PersonService } from './../../services/person.service';
 import { Component, OnInit } from '@angular/core';
@@ -70,7 +71,6 @@ export class CreatePersonComponent implements OnInit {
         this.idPerson = data;
           if (this.idPerson) {
           Swal.fire("Persona Creada", "Listo", "success");
-          this.router.navigate([`/${this.idPerson}/home`]);
         } else {
           Swal.fire("Ops...", "No guardado", "error");
           this.router.navigate(['/']);

@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 export class Education {
     idEducation?: number;
     idPerson: number;

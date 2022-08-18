@@ -1,9 +1,11 @@
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Person } from './../../models/person';
 import { Component, Input, OnInit } from '@angular/core';
 import { PortfileService } from 'src/app/services/portfile.service';
 import { PersonService } from 'src/app/services/person.service';
+import { async } from '@firebase/util';
 
 @Component({
   selector: 'app-navbar',

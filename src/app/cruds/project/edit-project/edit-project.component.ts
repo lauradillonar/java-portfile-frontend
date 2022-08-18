@@ -56,7 +56,7 @@ export class EditProjectComponent implements OnInit {
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         }
       );
     }
@@ -67,11 +67,11 @@ export class EditProjectComponent implements OnInit {
       this.projectService.update(this.project.idProject, this.project, this.idPerson).subscribe(
         data => {
           Swal.fire("Datos Actualizados", "Listo", "success");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         }
       );
     }

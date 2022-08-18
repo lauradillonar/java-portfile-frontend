@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import Swal from 'sweetalert2';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ContactService } from './../../../services/contact.service';
@@ -16,7 +17,7 @@ export class ListContactComponent implements OnInit {
   myPortfile: any;
   lang: any;
   labels: any;
-  idPerson?: number;
+  idPerson!: number;
   messages: Contact[] = [];
   hasMessages: boolean = false;
   textareas!: NodeList;

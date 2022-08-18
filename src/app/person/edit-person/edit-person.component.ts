@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PersonService } from './../../services/person.service';
 import { Person } from './../../models/person';
@@ -13,7 +14,7 @@ export class EditPersonComponent implements OnInit {
 
   person!: Person;
   hasPersons: boolean = false;
-  idPerson?: number;
+  idPerson!: number;
 
   constructor(
     private personService: PersonService,

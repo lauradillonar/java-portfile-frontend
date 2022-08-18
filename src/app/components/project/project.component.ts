@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Project } from './../../models/project';
 import { Router } from '@angular/router';
 import { ProjectService } from './../../services/project.service';
@@ -67,7 +68,7 @@ export class ProjectComponent implements OnInit {
         data => {
           Swal.fire("Proyecto borrado", "Listo", "success");
           this.listProject();
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         },
         err => {
            Swal.fire("Ops...", err.error.message, "error");

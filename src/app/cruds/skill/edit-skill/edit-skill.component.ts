@@ -56,7 +56,7 @@ export class EditSkillComponent implements OnInit {
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         }
       );
     }
@@ -67,11 +67,11 @@ export class EditSkillComponent implements OnInit {
       this.skillService.update(this.skill.idSkill, this.skill, this.idPerson).subscribe(
         data => {
           Swal.fire("Datos Actualizados", "Listo", "success");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         }
       );
     }   

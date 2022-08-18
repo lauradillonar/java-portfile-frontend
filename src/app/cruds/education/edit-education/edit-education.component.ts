@@ -46,17 +46,12 @@ export class EditEducationComponent implements OnInit {
     if (this.idEducation){
       this.educationService.getOne(this.idEducation).subscribe(
         data => {
-          if(data.idPerson != this.idPerson){
-            Swal.fire("Ops...", "No autorizado", "error");
-            this.router.navigate(['/']);
-          } else {
-            this.education = data;
-            this.hasEducation = true;
-          }
+          this.education = data;
+          this.hasEducation = true;
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         }
       );
     }
@@ -67,11 +62,11 @@ export class EditEducationComponent implements OnInit {
       this.educationService.update(this.education.idEducation, this.education, this.idPerson).subscribe(
         data => {
           Swal.fire("Datos Actualizados", "Listo", "success");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         }
       );
     }

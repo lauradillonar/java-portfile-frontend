@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { PersonService } from './../../services/person.service';
@@ -27,6 +28,7 @@ export class AboutmeComponent implements OnInit {
   textareas!: NodeList;
 
   ngOnInit(): void {
+    console.log("About: ", this.idPerson);
     this.labelService.getData().subscribe(
       data =>{
         this.myPortfile=data;

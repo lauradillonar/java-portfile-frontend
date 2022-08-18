@@ -68,11 +68,11 @@ export class CreateExperienceComponent implements OnInit {
     this.experienceService.save(experience, this.idPerson).subscribe(
       data => {
         Swal.fire("Experiencia Guardada", "Listo", "success");
-        this.router.navigate([`/${this.idPerson}/home`]);
+        this.router.navigate([`/home`]);
       },
       err => {
         Swal.fire("Ops...", err.error.message, "error");
-        this.router.navigate([`/${this.idPerson}/home`]);
+        this.router.navigate([`/home`]);
       }
     );
   }

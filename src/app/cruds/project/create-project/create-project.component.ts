@@ -58,11 +58,11 @@ export class CreateProjectComponent implements OnInit {
     this.projectService.save(project, this.idPerson).subscribe(
       data => {
         Swal.fire("Proyecto guardado", "Listo", "success");
-        this.router.navigate([`/${this.idPerson}/home`]);
+        this.router.navigate([`/home`]);
       }, 
       err => {
         Swal.fire("Ops...", err.error.message, "error");
-        this.router.navigate([`/${this.idPerson}/home`]);
+        this.router.navigate([`/home`]);
       }
     );
   }

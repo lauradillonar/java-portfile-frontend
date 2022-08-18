@@ -1,12 +1,17 @@
-<app-navbar [idPerson]="idPerson"><div class="preloader"></div></app-navbar>
-<app-aboutme [idPerson]="idPerson"><div class="preloader"></div></app-aboutme>
-<app-experience [idPerson]="idPerson"
-  ><div class="preloader"></div
-></app-experience>
-<app-education [idPerson]="idPerson"
-  ><div class="preloader"></div
-></app-education>
-<app-skill [idPerson]="idPerson"><div class="preloader"></div></app-skill>
-<app-project [idPerson]="idPerson"><div class="preloader"></div></app-project>
-<app-contact [idPerson]="idPerson"><div class="preloader"></div></app-contact>
-<app-footer><div class="preloader"></div></app-footer>
+<div class="preloader" *ngIf="!isPerson"></div>
+<div *ngIf="isPerson">
+  <app-navbar [idPerson]="idPerson"><div class="preloader"></div></app-navbar>
+  <app-aboutme [idPerson]="idPerson"><div class="preloader"></div></app-aboutme>
+  <app-experience [idPerson]="idPerson"
+    ><div class="preloader"></div
+  ></app-experience>
+  <app-education [idPerson]="idPerson"
+    ><div class="preloader"></div
+  ></app-education>
+  <app-skill [idPerson]="idPerson"><div class="preloader"></div></app-skill>
+  <app-project [idPerson ]="idPerson"
+    ><div class="preloader"></div
+  ></app-project>
+  <app-contact [idPerson]="idPerson"><div class="preloader"></div></app-contact>
+  <app-footer><div class="preloader"></div></app-footer>
+</div>

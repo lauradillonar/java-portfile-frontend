@@ -20,16 +20,12 @@
       </div>
       <div class="row">
         <div class="col">
-          <a
-            class="homebutton"
-            routerLink="/{{ person.idPerson }}/home"
-            fragment="main"
-          >
+          <button class="homebutton" (click)="sendPersonInfo(person)">
             <i class="far fa-eye"></i> Ver
-          </a>
-          <a class="editbutton" routerLink="/edit/{{ person.idPerson }}">
+          </button>
+          <button class="editbutton" (click)="editPerson(person.idPerson)">
             <i class="far fa-edit"></i> Editar
-          </a>
+          </button>
           <a class="deletebutton" (click)="deletePerson(person.idPerson)">
             <i class="far fa-trash-alt"></i> Borrar
           </a>
@@ -50,16 +46,12 @@
       </div>
       <div class="row">
         <div class="col">
-          <a
-            class="homebutton"
-            routerLink="/{{ person.idPerson }}/home"
-            fragment="main"
-          >
+          <button class="homebutton" (click)="sendPersonInfo(person)">
             <i class="far fa-eye"></i> Ver
-          </a>
-          <a class="editbutton" routerLink="/edit/{{ person.idPerson }}">
+          </button>
+          <button class="editbutton" (click)="editPerson(person.idPerson)">
             <i class="far fa-edit"></i> Editar
-          </a>
+          </button>
           <a class="deletebutton" (click)="deletePerson(person.idPerson)">
             <i class="far fa-trash-alt"></i> Borrar
           </a>

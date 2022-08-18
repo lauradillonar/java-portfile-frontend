@@ -18,7 +18,8 @@ export class PersonService {
   }
 
   public home(idPerson: number): Observable<Person>{
-    return this.httpClient.get<Person>(this.personURL + `${idPerson}`);
+      return this.httpClient.get<Person>(this.personURL + `${idPerson}`);
+    
   }
 
   public save(person: Person): Observable<any>{

@@ -55,6 +55,14 @@ a:hover {
     right: 11rem;
     cursor: pointer;
     margin: -10px 0 0 -10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #775f3e;
+}
+
+.homebutton:hover {
+    font-weight: 700;
 }
 
 .editbutton{
@@ -63,6 +71,10 @@ a:hover {
     right: 1rem;
     cursor: pointer;
     margin: -10px 0 0 -10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #775f3e;
 }
 
 .deletebutton{

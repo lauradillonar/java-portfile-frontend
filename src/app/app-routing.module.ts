@@ -34,7 +34,7 @@ const routes: Routes = [
     component: EditPersonComponent
   },
   {
-    path: ':idPerson/home', 
+    path: 'home', 
     component: HomeComponent
   },
   {

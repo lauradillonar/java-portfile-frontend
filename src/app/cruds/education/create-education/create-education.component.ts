@@ -61,16 +61,16 @@ export class CreateEducationComponent implements OnInit {
       this.viewmore
     );
 
+    
     this.educationService.save(education, this.idPerson).subscribe(
-      data => {
-        Swal.fire("Datos de educación guardados", "Listo", "success");
-        this.router.navigate([`/${this.idPerson}/home`]);
-      },
-      err => {
-        Swal.fire("Ops...", err.error.message, "error");
-        this.router.navigate([`/${this.idPerson}/home`]);
-      }
-    );
+        data => {
+          Swal.fire("Datos de educación guardados", "Listo", "success");
+          this.router.navigate([`/home`]);
+        },
+        err => {
+          Swal.fire("Ops...", err.error.message, "error");
+          this.router.navigate([`/home`]);
+        }
+      );
   }
-
 }

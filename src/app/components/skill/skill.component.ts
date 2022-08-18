@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
 import { SkillService } from './../../services/skill.service';
@@ -56,7 +57,7 @@ export class SkillComponent implements OnInit {
         data => {
           Swal.fire("Tecnología borrada", "Listo", "success");
           this.listSkill();
-          this.router.navigate([`/${this.idPerson}/home`]);
+          this.router.navigate([`/home`]);
         },
         err => {
           Swal.fire("Ops...", err.error.message, "error");

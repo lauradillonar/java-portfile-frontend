@@ -52,11 +52,11 @@ export class CreateSkillComponent implements OnInit {
     this.skillService.save(skill, this.idPerson).subscribe(
       data => {
         Swal.fire("Tecnología guardada", "Listo", "success");
-        this.router.navigate([`/${this.idPerson}/home`]);
+        this.router.navigate([`/home`]);
       },
       err => {
         Swal.fire("Ops...", err.error.messge, "error");
-        this.router.navigate([`/${this.idPerson}/home`]);
+        this.router.navigate([`/home`]);
       }
     );
   }
