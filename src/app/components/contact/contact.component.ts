@@ -1,3 +1,4 @@
+import { TokenService } from './../../services/token.service';
 import { Person } from 'src/app/models/person';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactService } from './../../services/contact.service';
@@ -31,13 +32,19 @@ export class ContactComponent implements OnInit {
   person?: Person;
   hasPerson: boolean = false;
 
+  isLogged: boolean = false;
+  userName: string = '';
+  idPersonLogged?: number;
+  isPersonLogged: boolean = false;
+
   constructor(
     private labels: PortfileService, 
     private fb: FormBuilder,
     private contactService: ContactService,
     private personService: PersonService,
     private activateRoute: ActivatedRoute,
-    private router: Router) 
+    private router: Router,
+    private tokenService: TokenService) 
   { 
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
@@ -48,6 +55,23 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.idPerson = this.activateRoute.snapshot.params['idPerson'];
+
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+      this.userName = this.tokenService.getUserName();
+      if(this.userName){
+        this.personService.getId(this.userName).subscribe(
+          id => {
+            this.idPersonLogged = id;
+            this.isPersonLogged = true;
+            console.log(this.idPersonLogged);
+          }
+        );  
+      }
+    }else{
+      this.isLogged = false;
+      this.userName = '';
+    }
 
     this.labels.getData().subscribe(
       data =>{

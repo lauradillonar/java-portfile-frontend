@@ -50,6 +50,7 @@
           <div class="row">
             <div class="col">
               <button
+                *ngIf="idPerson == idPersonLogged"
                 type="button"
                 class="editbutton"
                 routerLink="/{{ idPerson }}/experience/edit/{{
@@ -60,6 +61,7 @@
                 {{ lang?.experience?.label?.cardEditButton }}
               </button>
               <button
+                *ngIf="idPerson == idPersonLogged"
                 type="button"
                 class="deletebutton"
                 (click)="deleteExperience(item.idExperience)"
@@ -116,6 +118,7 @@
           <div class="row">
             <div class="col">
               <button
+                *ngIf="idPerson == idPersonLogged"
                 type="button"
                 class="editbutton"
                 routerLink="/{{ idPerson }}/experience/edit/{{
@@ -126,6 +129,7 @@
                 {{ lang?.experience?.label?.cardEditButton }}
               </button>
               <button
+                *ngIf="idPerson == idPersonLogged"
                 type="button"
                 class="deletebutton"
                 (click)="deleteExperience(item.idExperience)"
@@ -139,6 +143,7 @@
       </div>
     </div>
     <button
+      *ngIf="idPerson == idPersonLogged"
       type="button"
       class="createbutton"
       routerLink="/{{ idPerson }}/experience/create"

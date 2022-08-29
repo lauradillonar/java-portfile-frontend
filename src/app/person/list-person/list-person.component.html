@@ -1,4 +1,5 @@
-<app-navbar></app-navbar>
+<app-navbar *ngIf="isPerson" [idPerson]="idPerson"></app-navbar>
+<app-navbar *ngIf="!isPerson"></app-navbar>
 <div class="initial"></div>
 <div class="preloader" *ngIf="!hasPersons"></div>
 
@@ -27,10 +28,18 @@
           >
             <i class="far fa-eye"></i> Ver
           </a>
-          <a class="editbutton" routerLink="/edit/{{ person.idPerson }}">
+          <a
+            *ngIf="isLogged && person.idPerson === idPerson"
+            class="editbutton"
+            routerLink="/edit/{{ person.idPerson }}"
+          >
             <i class="far fa-edit"></i> Editar
           </a>
-          <a class="deletebutton" (click)="deletePerson(person.idPerson)">
+          <a
+            *ngIf="isLogged && person.idPerson === idPerson"
+            class="deletebutton"
+            (click)="deletePerson(person.idPerson)"
+          >
             <i class="far fa-trash-alt"></i> Borrar
           </a>
         </div>
@@ -57,10 +66,18 @@
           >
             <i class="far fa-eye"></i> Ver
           </a>
-          <a class="editbutton" routerLink="/edit/{{ person.idPerson }}">
+          <a
+            *ngIf="isLogged && person.idPerson === idPerson"
+            class="editbutton"
+            routerLink="/edit/{{ person.idPerson }}"
+          >
             <i class="far fa-edit"></i> Editar
           </a>
-          <a class="deletebutton" (click)="deletePerson(person.idPerson)">
+          <a
+            *ngIf="isLogged && person.idPerson === idPerson"
+            class="deletebutton"
+            (click)="deletePerson(person.idPerson)"
+          >
             <i class="far fa-trash-alt"></i> Borrar
           </a>
         </div>

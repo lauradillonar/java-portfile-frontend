@@ -1,3 +1,5 @@
+import { PersonService } from './../../services/person.service';
+import { TokenService } from './../../services/token.service';
 import { Router } from '@angular/router';
 import { Education } from './../../models/education';
 import { EducationService } from './../../services/education.service';
@@ -15,7 +17,9 @@ export class EducationComponent implements OnInit {
   constructor(
     private data: PortfileService,
     private educationService: EducationService,
-    private router: Router) { }
+    private router: Router,
+    private tokenService: TokenService,
+    private personService: PersonService) { }
 
   myPortfile:any;
   lang: any;
@@ -24,9 +28,30 @@ export class EducationComponent implements OnInit {
   educations: Education[] = [];
   hasEducation: boolean = false;
   textareas!: NodeList;
+  isLogged: boolean = false;
+  idPersonLogged?: number;
+  isPersonLogged: boolean = false;
+  userName: string = '';
   
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+      this.userName = this.tokenService.getUserName();
+      if(this.userName){
+        this.personService.getId(this.userName).subscribe(
+          id => {
+            this.idPersonLogged = id;
+            this.isPersonLogged = true;
+            console.log(this.idPersonLogged);
+          }
+        );  
+      }
+    }else{
+      this.isLogged = false;
+      this.userName = '';
+    }
+
     this.data.getData().subscribe(data =>{
       this.myPortfile=data;
       this.lang=this.myPortfile.es;

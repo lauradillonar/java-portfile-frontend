@@ -23,6 +23,10 @@ export class PersonService {
     return this.httpClient.get<Person>(this.personURL + `${idPerson}`);
   }
 
+  public getId(user: String):Observable<number>{
+    return this.httpClient.get<number>(this.personURL + `user/${user}`);
+  }
+
   public login (loginUser: LoginUser): Observable<JwtDto>{
     return this.httpClient.post<JwtDto>(this.personURL + `login`, loginUser);
   }

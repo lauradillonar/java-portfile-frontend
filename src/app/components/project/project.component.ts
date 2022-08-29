@@ -1,3 +1,5 @@
+import { TokenService } from './../../services/token.service';
+import { PersonService } from './../../services/person.service';
 import { Project } from './../../models/project';
 import { Router } from '@angular/router';
 import { ProjectService } from './../../services/project.service';
@@ -15,7 +17,9 @@ export class ProjectComponent implements OnInit {
   constructor(
     private labels: PortfileService,
     private projectService: ProjectService,
-    private router: Router) { }
+    private router: Router,
+    private personService: PersonService,
+    private tokenService: TokenService) { }
 
   myPortfile:any;
   lang: any;
@@ -24,9 +28,31 @@ export class ProjectComponent implements OnInit {
   projects: Project[] = [];
   hasProject: boolean = false;
   textareas!: NodeList;
+  isLogged: boolean = false;
+  userName: string = '';
+  idPersonLogged?: number;
+  isPersonLogged: boolean = false;
   
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+      this.userName = this.tokenService.getUserName();
+      if(this.userName){
+        this.personService.getId(this.userName).subscribe(
+          id => {
+            this.idPersonLogged = id;
+            this.isPersonLogged = true;
+            console.log(this.idPersonLogged);
+          }
+        );  
+      }
+    }else{
+      this.isLogged = false;
+      this.userName = '';
+    }
+
+
     this.labels.getData().subscribe(data =>{
       this.myPortfile=data;
       this.lang=this.myPortfile.es;

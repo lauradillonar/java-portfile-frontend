@@ -1,3 +1,4 @@
+import { TokenService } from './../../services/token.service';
 import { PersonService } from './../../services/person.service';
 import { Person } from './../../models/person';
 import { Component, OnInit } from '@angular/core';
@@ -12,10 +13,32 @@ export class ListPersonComponent implements OnInit {
 
   persons: Person[] = [];
   hasPersons: boolean = false;
+  isLogged = false;
+  userName = '';
+  idPerson?: number;
+  isPerson: boolean = false;
 
-  constructor(private personService: PersonService) { }
+  constructor(
+    private personService: PersonService,
+    private tokenService: TokenService
+  ) { }
 
   ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+      this.userName = this.tokenService.getUserName();
+      if(this.userName){
+        this.personService.getId(this.userName).subscribe(
+          id => {
+            this.idPerson = id;
+            this.isPerson = true;
+          }
+        );  
+      }
+    }else{
+      this.isLogged = false;
+      this.userName = '';
+    }
     this.listPerson();
   }
 

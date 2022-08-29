@@ -1,3 +1,4 @@
+import { TokenService } from './../../services/token.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { PersonService } from './../../services/person.service';
@@ -15,7 +16,8 @@ export class AboutmeComponent implements OnInit {
   constructor(
     private labelService: PortfileService,
     private personService: PersonService,
-    private router: Router
+    private router: Router,
+    private tokenService: TokenService
   ) { }
   
   myPortfile:any;
@@ -25,6 +27,10 @@ export class AboutmeComponent implements OnInit {
   person!: Person;
   isPerson: boolean = false;
   textareas!: NodeList;
+  isLogged: boolean = false;
+  userName: string = '';
+  idPersonLogged?: number; 
+  isPersonLogged: boolean = false;
 
   ngOnInit(): void {
     this.labelService.getData().subscribe(
@@ -37,6 +43,23 @@ export class AboutmeComponent implements OnInit {
         console.log(err);
       }
     );
+
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+      this.userName = this.tokenService.getUserName();
+      if(this.userName){
+        this.personService.getId(this.userName).subscribe(
+          id => {
+            this.idPersonLogged = id;
+            this.isPersonLogged = true;
+            console.log(this.idPersonLogged);
+          }
+        );  
+      }
+    }else{
+      this.isLogged = false;
+      this.userName = '';
+    }
 
     if(this.idPerson){
       this.personService.home(this.idPerson).subscribe(

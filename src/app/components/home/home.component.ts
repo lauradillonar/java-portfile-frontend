@@ -1,3 +1,4 @@
+import { TokenService } from './../../services/token.service';
 import  Swal  from 'sweetalert2';
 import { Person } from './../../models/person';
 import { PersonService } from './../../services/person.service';
@@ -22,6 +23,7 @@ export class HomeComponent implements OnInit {
     private personService: PersonService) { }
 
   ngOnInit(): void {
+
     this.idPerson = this.activateRouter.snapshot.params['idPerson'];
     
     if(this.idPerson){

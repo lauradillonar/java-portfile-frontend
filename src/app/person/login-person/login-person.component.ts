@@ -44,7 +44,12 @@ export class LoginPersonComponent implements OnInit {
         this.tokenService.setUserName(data.userName);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.router.navigate(['/']);
+        this.personService.getId(this.userName).subscribe(
+          id => {
+            this.router.navigate([`/${id}/home`]);
+          }
+        );
+        
       },
       err => {
         this.isLogged = false;

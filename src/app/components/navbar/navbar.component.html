@@ -25,6 +25,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav ms-auto">
         <a
+          *ngIf="isPerson"
           class="nav-link px-lg-2 rounded"
           routerLink="/{{ idPerson }}/{{ lang?.navbar?.home?.url }}"
           fragment="{{ lang?.navbar?.home?.fragment }}"
@@ -34,6 +35,7 @@
         >
         <div *ngFor="let item of items">
           <a
+            *ngIf="isPerson"
             class="nav-link px-lg-2 rounded"
             routerLink="/{{ idPerson }}/{{ item?.url }}"
             fragment="{{ item?.fragment }}"
@@ -42,6 +44,24 @@
             >{{ item?.link }}</a
           >
         </div>
+        <a
+          *ngIf="!isLogged"
+          class="nav-link px-lg-2 rounded"
+          routerLink="/login"
+          data-bs-toggle="collapse"
+          data-bs-target=".navbar-collapse.show"
+        >
+          <i class="fas fa-sign-in-alt"></i> INICIAR SESIÓN
+        </a>
+        <a
+          *ngIf="isLogged"
+          class="nav-link px-lg-2 rounded"
+          (click)="onLogOut()"
+          data-bs-toggle="collapse"
+          data-bs-target=".navbar-collapse.show"
+        >
+          <i class="fas fa-door-open"></i> CERRAR SESIÓN
+        </a>
       </div>
     </div>
   </div>

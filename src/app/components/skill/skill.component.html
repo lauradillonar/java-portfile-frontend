@@ -30,7 +30,7 @@
                     </div>
                   </div>
 
-                  <div class="buttons pt-5">
+                  <div *ngIf="idPerson == idPersonLogged" class="buttons pt-5">
                     <button
                       type="button"
                       class="editbutton"
@@ -55,6 +55,7 @@
         </div>
       </div>
       <button
+        *ngIf="idPerson == idPersonLogged"
         type="button"
         class="createbutton"
         routerLink="/{{ idPerson }}/skill/create"

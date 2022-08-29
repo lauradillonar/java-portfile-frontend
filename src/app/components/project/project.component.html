@@ -44,6 +44,7 @@
                   ><i class="far fa-eye"></i> {{ label.cardViewmoreButton }}</a
                 >
                 <button
+                  *ngIf="idPerson == idPersonLogged"
                   type="button"
                   class="editbutton"
                   routerLink="/{{ idPerson }}/project/edit/{{
@@ -54,6 +55,7 @@
                   {{ label.cardEditButton }}
                 </button>
                 <button
+                  *ngIf="idPerson == idPersonLogged"
                   type="button"
                   class="deletebutton"
                   (click)="deleteProject(project.idProject)"
@@ -103,6 +105,7 @@
                   ><i class="far fa-eye"></i> {{ label.cardViewmoreButton }}</a
                 >
                 <button
+                  *ngIf="idPerson == idPersonLogged"
                   type="button"
                   class="editbutton"
                   routerLink="/{{ idPerson }}/project/edit/{{
@@ -113,6 +116,7 @@
                   {{ label.cardEditButton }}
                 </button>
                 <button
+                  *ngIf="idPerson == idPersonLogged"
                   type="button"
                   class="deletebutton"
                   (click)="deleteProject(project.idProject)"
@@ -162,6 +166,7 @@
                   ><i class="far fa-eye"></i> {{ label.cardViewmoreButton }}</a
                 >
                 <button
+                  *ngIf="idPerson == idPersonLogged"
                   type="button"
                   class="editbutton"
                   routerLink="/{{ idPerson }}/project/edit/{{
@@ -172,6 +177,7 @@
                   {{ label.cardEditButton }}
                 </button>
                 <button
+                  *ngIf="idPerson == idPersonLogged"
                   type="button"
                   class="deletebutton"
                   (click)="deleteProject(project.idProject)"
@@ -186,6 +192,7 @@
       </div>
     </div>
     <button
+      *ngIf="idPerson == idPersonLogged"
       type="button"
       class="createbutton"
       routerLink="/{{ idPerson }}/project/create"

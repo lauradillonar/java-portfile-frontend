@@ -1,3 +1,4 @@
+import { TokenService } from './../../services/token.service';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Person } from './../../models/person';
@@ -18,13 +19,21 @@ export class NavbarComponent implements OnInit {
   @Input() idPerson?: number;
   person!: Person;
   isPerson: boolean = false;
+  isLogged = false;
 
   constructor(
     private data: PortfileService,
     private personService: PersonService,
-    private router: Router) { }
+    private router: Router,
+    private tokenService: TokenService) { }
 
   ngOnInit(): void {
+
+    if (this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
 
     this.data.getData().subscribe(data =>{
       this.myPortfile=data;
@@ -44,5 +53,10 @@ export class NavbarComponent implements OnInit {
         }
       );
     }
+  }
+
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
   }
 }
