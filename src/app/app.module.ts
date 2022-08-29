@@ -33,6 +33,7 @@ import { EditSkillComponent } from './cruds/skill/edit-skill/edit-skill.componen
 import { CreateProjectComponent } from './cruds/project/create-project/create-project.component';
 import { EditProjectComponent } from './cruds/project/edit-project/edit-project.component';
 import { ListContactComponent } from './cruds/contact/list-contact/list-contact.component';
+import { LoginPersonComponent } from './person/login-person/login-person.component';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { ListContactComponent } from './cruds/contact/list-contact/list-contact.
     EditSkillComponent,
     CreateProjectComponent,
     EditProjectComponent,
-    ListContactComponent
+    ListContactComponent,
+    LoginPersonComponent
   ],
   imports: [
     BrowserModule,

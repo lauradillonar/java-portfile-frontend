@@ -12,6 +12,7 @@ export class Person {
     aboutMe: string;
     job: string;
     location: string;
+    authorities: string[]=[];
     imageHeader?: string;
     image?: string;
     logoSrc?: string;
@@ -20,6 +21,7 @@ export class Person {
     facebook?: string;
     instagram?: string;
     twitter?: string;
+    
     
     constructor(
         name: string,
@@ -34,6 +36,7 @@ export class Person {
         aboutMe: string,
         job: string,
         location: string,
+        authorities: string[],
         imageHeader?: string,
         image?: string,
         logoSrc?: string,
@@ -55,6 +58,7 @@ export class Person {
         this.aboutMe = aboutMe;
         this.job = job;
         this.location = location;
+        this.authorities = authorities;
         this.imageHeader = imageHeader;
         this.image = image;
         this.logoSrc = logoSrc;

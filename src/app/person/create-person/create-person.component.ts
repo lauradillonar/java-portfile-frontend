@@ -24,6 +24,7 @@ export class CreatePersonComponent implements OnInit {
   aboutMe: string = '';
   job: string = '';
   location: string = '';
+  authorities: string[]=[];
   imageHeader?: string;
   image?: string;
   logoSrc?: string;
@@ -55,6 +56,7 @@ export class CreatePersonComponent implements OnInit {
       this.aboutMe,
       this.job,
       this.location,
+      this.authorities,
       this.imageHeader,
       this.image,
       this.logoSrc,

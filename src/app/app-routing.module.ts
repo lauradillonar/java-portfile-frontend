@@ -1,3 +1,4 @@
+import { LoginPersonComponent } from './person/login-person/login-person.component';
 import { ListContactComponent } from './cruds/contact/list-contact/list-contact.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ProjectComponent } from './components/project/project.component';
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path:'', 
     component: ListPersonComponent
+  },
+  {
+    path:'login',
+    component: LoginPersonComponent
   },
   {
     path:'create', 

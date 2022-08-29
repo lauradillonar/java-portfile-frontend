@@ -1,3 +1,5 @@
+import { JwtDto } from './../models/jwt-dto';
+import { LoginUser } from './../models/login-user';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { environment } from './../../environments/environment';
@@ -19,6 +21,10 @@ export class PersonService {
 
   public home(idPerson: number): Observable<Person>{
     return this.httpClient.get<Person>(this.personURL + `${idPerson}`);
+  }
+
+  public login (loginUser: LoginUser): Observable<JwtDto>{
+    return this.httpClient.post<JwtDto>(this.personURL + `login`, loginUser);
   }
 
   public save(person: Person): Observable<any>{
