@@ -34,6 +34,7 @@ import { CreateProjectComponent } from './cruds/project/create-project/create-pr
 import { EditProjectComponent } from './cruds/project/edit-project/edit-project.component';
 import { ListContactComponent } from './cruds/contact/list-contact/list-contact.component';
 import { LoginPersonComponent } from './person/login-person/login-person.component';
+import { interceptorProvider } from './interceptors/interceptor.service';
 
 
 @NgModule({
@@ -71,7 +72,7 @@ import { LoginPersonComponent } from './person/login-person/login-person.compone
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  providers: [AngularFirestore, ContactGuard],
+  providers: [interceptorProvider, AngularFirestore, ContactGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
