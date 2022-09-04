@@ -36,7 +36,7 @@
             <i class="far fa-edit"></i> Editar
           </a>
           <a
-            *ngIf="isLogged && person.idPerson === idPerson"
+            *ngIf="isLogged && person.idPerson === idPerson && isAdmin"
             class="deletebutton"
             (click)="deletePerson(person.idPerson)"
           >
@@ -74,7 +74,7 @@
             <i class="far fa-edit"></i> Editar
           </a>
           <a
-            *ngIf="isLogged && person.idPerson === idPerson"
+            *ngIf="isLogged && person.idPerson === idPerson && isAdmin"
             class="deletebutton"
             (click)="deletePerson(person.idPerson)"
           >

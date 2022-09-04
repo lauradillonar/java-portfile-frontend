@@ -17,6 +17,8 @@ export class ListPersonComponent implements OnInit {
   userName = '';
   idPerson?: number;
   isPerson: boolean = false;
+  isAdmin: boolean = false;
+  roles!: string[];
 
   constructor(
     private personService: PersonService,
@@ -35,6 +37,12 @@ export class ListPersonComponent implements OnInit {
           }
         );  
       }
+      this.roles = this.tokenService.getAuthorities();
+      this.roles.forEach(role => {
+        if (role == 'ROLE_ADMIN'){
+          this.isAdmin = true;
+        }
+      });
     }else{
       this.isLogged = false;
       this.userName = '';

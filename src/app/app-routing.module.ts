@@ -1,3 +1,4 @@
+import { PersonGuardService as guard } from './guards/person-guard.service';
 import { LoginPersonComponent } from './person/login-person/login-person.component';
 import { ListContactComponent } from './cruds/contact/list-contact/list-contact.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -36,7 +37,8 @@ const routes: Routes = [
   },
   {
     path:'edit/:idPerson',
-    component: EditPersonComponent
+    component: EditPersonComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/home', 
@@ -44,11 +46,13 @@ const routes: Routes = [
   },
   {
     path: ':idPerson/experience/create',
-    component: CreateExperienceComponent
+    component: CreateExperienceComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/experience/edit/:idExperience',
-    component: EditExperienceComponent
+    component: EditExperienceComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/experiences',
@@ -56,11 +60,13 @@ const routes: Routes = [
   },
   {
     path: ':idPerson/education/create',
-    component: CreateEducationComponent
+    component: CreateEducationComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/education/edit/:idEducation',
-    component: EditEducationComponent
+    component: EditEducationComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/educations',
@@ -68,11 +74,13 @@ const routes: Routes = [
   },
   {
     path: ':idPerson/skill/create',
-    component: CreateSkillComponent
+    component: CreateSkillComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/skill/edit/:idSkill',
-    component: EditSkillComponent
+    component: EditSkillComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/skills',
@@ -80,11 +88,13 @@ const routes: Routes = [
   },
   {
     path: ':idPerson/project/create',
-    component: CreateProjectComponent
+    component: CreateProjectComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/project/edit/:idProject',
-    component: EditProjectComponent
+    component: EditProjectComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/projects',
@@ -92,7 +102,8 @@ const routes: Routes = [
   },
   {
     path: ':idPerson/contact/list',
-    component: ListContactComponent
+    component: ListContactComponent,
+    canActivate: [guard], data: {expectedRole: ['admin','user']}
   },
   {
     path: ':idPerson/contact',

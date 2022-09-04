@@ -21,13 +21,13 @@ export class NavbarComponent implements OnInit {
   isPerson: boolean = false;
   isLogged = false;
   isPersonList: boolean = false;
+  isLogin: boolean = false;
 
   constructor(
     private data: PortfileService,
     private personService: PersonService,
     private router: Router,
-    private tokenService: TokenService,
-    private activatedRoute: ActivatedRoute) { }
+    private tokenService: TokenService) { }
 
   ngOnInit(): void {
 
@@ -39,6 +39,10 @@ export class NavbarComponent implements OnInit {
 
     if(window.location.pathname === '/portfile/'){
       this.isPersonList = true;
+    }
+
+    if(window.location.pathname === '/portfile/login'){
+      this.isLogin = true;
     }
 
     this.data.getData().subscribe(data =>{
