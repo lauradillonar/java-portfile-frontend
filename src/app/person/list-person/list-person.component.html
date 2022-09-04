@@ -19,30 +19,28 @@
           <h6>{{ person.job }}</h6>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <a
-            class="homebutton"
-            routerLink="/{{ person.idPerson }}/home"
-            fragment="main"
-          >
-            <i class="far fa-eye"></i> Ver
-          </a>
-          <a
-            *ngIf="isLogged && person.idPerson === idPerson"
-            class="editbutton"
-            routerLink="/edit/{{ person.idPerson }}"
-          >
-            <i class="far fa-edit"></i> Editar
-          </a>
-          <a
-            *ngIf="isLogged && person.idPerson === idPerson && isAdmin"
-            class="deletebutton"
-            (click)="deletePerson(person.idPerson)"
-          >
-            <i class="far fa-trash-alt"></i> Borrar
-          </a>
-        </div>
+      <div class="d-flex flex-row justify-content-end my-3 mx-3">
+        <a
+          class="homebutton"
+          routerLink="/{{ person.idPerson }}/home"
+          fragment="main"
+        >
+          <i class="far fa-eye"></i> Ver
+        </a>
+        <a
+          *ngIf="isLogged && person.idPerson === idPerson"
+          class="editbutton"
+          routerLink="/edit/{{ person.idPerson }}"
+        >
+          <i class="far fa-edit"></i> Editar
+        </a>
+        <a
+          *ngIf="isLogged && person.idPerson === idPerson && isAdmin"
+          class="deletebutton"
+          (click)="deletePerson(person.idPerson)"
+        >
+          <i class="far fa-trash-alt"></i> Borrar
+        </a>
       </div>
     </div>
     <div
@@ -57,30 +55,28 @@
           <h6>{{ person.job }}</h6>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <a
-            class="homebutton"
-            routerLink="/{{ person.idPerson }}/home"
-            fragment="main"
-          >
-            <i class="far fa-eye"></i> Ver
-          </a>
-          <a
-            *ngIf="isLogged && person.idPerson === idPerson"
-            class="editbutton"
-            routerLink="/edit/{{ person.idPerson }}"
-          >
-            <i class="far fa-edit"></i> Editar
-          </a>
-          <a
-            *ngIf="isLogged && person.idPerson === idPerson && isAdmin"
-            class="deletebutton"
-            (click)="deletePerson(person.idPerson)"
-          >
-            <i class="far fa-trash-alt"></i> Borrar
-          </a>
-        </div>
+      <div class="d-flex flex-row justify-content-end my-3 mx-3">
+        <a
+          class="homebutton"
+          routerLink="/{{ person.idPerson }}/home"
+          fragment="main"
+        >
+          <i class="far fa-eye"></i> Ver
+        </a>
+        <a
+          *ngIf="isLogged && person.idPerson === idPerson"
+          class="editbutton"
+          routerLink="/edit/{{ person.idPerson }}"
+        >
+          <i class="far fa-edit"></i> Editar
+        </a>
+        <a
+          *ngIf="isLogged && person.idPerson === idPerson && isAdmin"
+          class="deletebutton"
+          (click)="deletePerson(person.idPerson)"
+        >
+          <i class="far fa-trash-alt"></i> Borrar
+        </a>
       </div>
     </div>
   </div>

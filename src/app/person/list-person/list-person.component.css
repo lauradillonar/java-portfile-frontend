@@ -50,25 +50,27 @@ a:hover {
 }
 
 .homebutton{
-    position: absolute;
-    bottom: 1rem;
-    right: 11rem;
+    background-color: transparent;
     cursor: pointer;
-    margin: -10px 0 0 -10px;
+    border: none;
+    outline: none;
+    color: #616161;
 }
 
 .editbutton{
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    background-color: transparent;
     cursor: pointer;
-    margin: -10px 0 0 -10px;
+    border: none;
+    outline: none;
+    color: #616161;
+    margin-left: 2rem;
 }
 
 .deletebutton{
-    position: absolute;
-    bottom: 1rem;
-    right: 6rem;
+    background-color: transparent;
     cursor:pointer;
-    margin: -10px 0 0 -10px;
+    border: none;
+    outline: none;
+    color: #616161;
+    margin-left: 2rem;
 }
