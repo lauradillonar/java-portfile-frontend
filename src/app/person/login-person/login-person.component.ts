@@ -3,6 +3,7 @@ import { PersonService } from 'src/app/services/person.service';
 import { TokenService } from './../../services/token.service';
 import { LoginUser } from './../../models/login-user';
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login-person',
@@ -44,6 +45,9 @@ export class LoginPersonComponent implements OnInit {
         this.tokenService.setUserName(data.userName);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
+
+        Swal.fire("Hola "+data.userName, "", "success");
+
         this.personService.getId(this.userName).subscribe(
           id => {
             this.router.navigate([`/${id}/home`]);
@@ -55,7 +59,7 @@ export class LoginPersonComponent implements OnInit {
         this.isLogged = false;
         this.isLoginFail = true;
         this.errMsg = err.error.message;
-        console.log(this.errMsg);
+        Swal.fire("Ops...", this.errMsg, "error");
       }
     );
   }
